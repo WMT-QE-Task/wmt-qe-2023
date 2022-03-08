@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Welcome to the 2022 Quality Estimation Shared Task! &middot; WMT QE Shared Task
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          WMT QE Shared Task
+        </a>
+      </h1>
+      <p class="lead">Automatic methods for estimating the quality of MT output at run-time.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" href="/">Home</a>
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/subtasks/task1/">Task 1: Quality prediction</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/subtasks/task2/">Task 2: Explainable QE</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/subtasks/task3/">Task 3: Critical Error Detection</a>
+          
+        
+      
+        
+      
+        
+      
+      
+      <a class="sidebar-nav-item" href="https://github.com/WMT-Metrics-task/">GitHub project</a>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <h1 id="welcome-to-the-2022-quality-estimation-shared-task">Welcome to the 2022 Quality Estimation Shared Task!</h1>
+
+<p>This shared task focuses on automatic methods for estimating the quality of neural machine translation output at run-time, without relying on reference translations. It will cover estimation at sentence and word levels. This year we introduce the following new elements:</p>
+
+<ul>
+  <li>Updated quality annotation scheme: quality annotations for the majority of the tasks are now based on <strong>Multidimentional Quality Metrics (MQM)</strong> instead of direct assessments.</li>
+  <li>MQM annotated data aligned with the  <a href="https://wmt-metrics-task.github.io/">Metrics shared task</a>: we share part of the data used in this year’s Metrics task, to promote research that bridges the two domains.</li>
+  <li><strong>New language pairs:</strong> we introduce a novel dataset on English-Marathi, with sentence level and word level annotations (direct assesments).</li>
+  <li>An <strong>explability subtask</strong>, following up on the first edition of Eval4NLP shared task.</li>
+  <li>Updated catastrophic error detection task: TBA.</li>
+</ul>
+
+<p>Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmail.com">Contact Us</a>!</p>
+
+<h2 id="metrics-task-important-dates">Metrics Task Important Dates</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th style="text-align: center">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Release of training and dev data</td>
+      <td style="text-align: center">TBA</td>
+    </tr>
+    <tr>
+      <td>Release of test data</td>
+      <td style="text-align: center">TBA</td>
+    </tr>
+    <tr>
+      <td>Test predictions deadline</td>
+      <td style="text-align: center">TBA</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="goals">Goals</h2>
+
+<p>In addition to generally advancing the state of the art in quality estimation, our specific <strong>goals</strong> are:</p>
+
+<ul>
+  <li>to extend the available public benchmark datasets;</li>
+  <li>to investigate the potential and suitability of MQM annotations for quality estimation;</li>
+  <li>to investigate new multilingual and language independent approaches esp. for zero-shot prediction;</li>
+  <li>to study the feasibility of explainable quality estimation; and</li>
+  <li>to focus on detection of extreme/catastrophic errors in MT.</li>
+</ul>
+
+<p>For all tasks, the datasets and NMT models that generated the translations will be made publicly available.</p>
+
+<p>Participants are also allowed to explore any additional data and resources deemed relevant. Below are the three QE tasks addressing these goals.</p>
+
+<h3 id="subtasks">Subtasks:</h3>
+
+<ol>
+  <li><a href="./subtasks/task1/">Quality prediction</a>: <strong>TBA</strong></li>
+  <li><a href="./subtasks/task2/">Explainable Quality Estimation</a>: <strong>TBA</strong></li>
+  <li><a href="./subtasks/task3/">Critical Error Detection</a>: <strong>TBA</strong></li>
+</ol>
+
+<h2 id="submission-information">Submission Information</h2>
+<p>The shared task competition will take place on CODALAB. Details <strong>TBA</strong></p>
+
+<h2 id="useful-software">Useful Software</h2>
+<p>Here are some open source software for QE that might be useful for participants:</p>
+<ul>
+  <li>OpenKiwi</li>
+  <li>DeepQuest-py</li>
+  <li>TransQuest</li>
+</ul>
+
+<h2 id="submission-requirements">Submission Requirements</h2>
+<p>Each participating team can submit at most 15 systems for each of the language pairs of each subtask, except for the multilingual track of tasks 1 &amp; 2 (10 systems max). These should be submitted to a CODALAB page for each subtask.
+Please check that your system output on the dev data is correctly read by the official evaluation scripts.</p>
+
+<h2 id="organization">Organization:</h2>
+
+<ul>
+  <li>Chrysoula Zerva (Instituto de Telecomunicações)</li>
+  <li>André Martins (Instituto de Telecomunicações, Unbabel)</li>
+  <li>Marina Fomicheva (University of Sheffield)</li>
+  <li>Frédéric Blain (University of Wolverhampton)</li>
+  <li>Ricardo Rei (INESC-ID, Unbabel)</li>
+  <li>José Souza (Unbabel)</li>
+  <li>Diptesh Kanojia (University of Surrey)</li>
+  <li>Constantin Orasan (University of Surrey)</li>
+  <li>Lucia Specia (Imperial College London)</li>
+</ul>
+
+<h2 id="sponsors">Sponsors</h2>
+
+<style>
+	.column {
+	  float: left;
+	  padding: 20px;
+	}
+	
+</style>
+
+<div style="position: relative; width: 700px; height: 100px; min-height: 200px">    
+    <div style="position: relative; bottom: 0px;">
+	   <div class="column">
+	     <img src="/public/css/IT.png" height="70px" width="auto" />
+	   </div>
+	   <div class="column">
+	     <img src="/public/css/unbabel.png" height="70px" width="auto" />
+	   </div>
+	   <div class="column">
+	     <img src="/public/css/IST.png" height="70px" width="auto" />
+	   </div>
+	   <div class="column">
+	     <img src="/public/css/Sheffield.png" height="70px" width="auto" />
+	   </div>
+	</div>
+<div style="position: relative; width: 700px; height: 100px; min-height: 200px">    
+    <div style="position: relative; bottom: 0px;">
+	   <div class="column">
+	     <img src="/public/css/Surrey.png" height="70px" width="auto" />
+	   </div>
+	   <div class="column">
+	     <img src="/public/css/Wolverhampton.jpeg" height="70px" width="auto" />
+	   </div>
+	   <div class="column">
+	     <img src="/public/css/INESC-ID.png" height="70px" width="auto" />
+	   </div>
+	   <div class="column">
+	     <img src="/public/css/Imperial.jpeg" height="70px" width="auto" />
+	   </div>
+	</div>
+</div></div>
+
+    </div>
+
+  </body>
+</html>
