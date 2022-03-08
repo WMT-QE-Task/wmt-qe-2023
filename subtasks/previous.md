@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 'Task 1: Quality prediction'
+title: 'Previous Editions & Resources'
 ---
 
 * [Home](../index.md)
