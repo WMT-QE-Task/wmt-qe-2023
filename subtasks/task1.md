@@ -5,4 +5,7 @@ title: 'Task 1: Quality prediction'
 
 * [Home](../index.md)
 
-TBA
+# Sentence-level Subtask
+
+
+# Word-level Subtask
