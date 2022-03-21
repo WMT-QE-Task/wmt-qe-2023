@@ -24,7 +24,9 @@ Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmai
 | ----------- | :-----------: |
 | Release of training and dev data | TBA |
 | Release of test data | TBA |
-| Test predictions deadline | TBA |
+| Submission platform open |TBA|
+| Submission of test predictions deadline | TBA |
+| Announcement of results | TBA |
 
 ## Goals
 
