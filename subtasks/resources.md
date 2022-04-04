@@ -12,19 +12,29 @@ We provide below links to additional resources that can be used for training/aug
 
 ## MQM annotation data
 
-For the subtasks using **MQM annotations** participants can use the En-De and Zh-En MQM annotations provided for the *Metrics Shared Task 2021* available on the following [github link](https://github.com/google/wmt-mqm-human-evaluation). 
+For the subtasks using **MQM annotations** participants can use the En-De and Zh-En MQM annotations provided for the *Metrics Shared Task 2021* available on the following [github link](https://github.com/google-research/mt-metrics-eval). 
 
 The data consists of:
 
 - Sentences onbtained from the WMT 2020 and WMT 2021 newstests. Specifically per language:
-  - English-German (En-De) [2020][2021]
-  - Chinese-English (Zh-En) [2020][2021]
+  - English-German (En-De) 
+    - 2020: <span style="color:#6495ED">[11K src-mt pairs]</span>
+    - 2021: <span style="color:#6495ED">[7K src-mt pairs]</span>
+  - Chinese-English (Zh-En) 
+    - 2020: <span style="color:#6495ED">[15K src-mt pairs]</span>
+    - 2021: <span style="color:#6495ED">[8K src-mt pairs]</span>
+  - English-Russian (En-Ru) 
+    - 2021: <span style="color:#6495ED">[7K src-mt pairs]</span>
 - Sentences onbtained from TEDTalks. Specifically per language:
-  - English-German (En-De) [2021]
-  - Chinese-English (Zh-En) [2021]
-```
-Links to the En-Ru data TBA
-```
+  - English-German (En-De) 
+    - 2021: <span style="color:#6495ED">[8K src-mt pairs]</span>
+  - English-Russian (En-Ru) 
+    - 2021: <span style="color:#6495ED">[8K src-mt pairs]</span>
+  - Chinese-English (Zh-En) 
+    - 2021: <span style="color:#6495ED">[8K src-mt pairs]</span>   <br />
+<br />
+  
+
 
  ## DA annotation data
 
@@ -34,21 +44,21 @@ Links to the En-Ru data TBA
  
  -  Wikipedia data for 6 language pairs that includes:
  
-    - English-German (En-De)  <span style="color:green">[high resource]</span><span style="color:red">[10K segments]</span>. 
-    - English-Chinese (En-Zh) <span style="color:green">[high resource]</span><span style="color:red">[10K segments]</span>. 
-    - Romanian-English (Ro-En) <span style="color:green">[medium resource]</span><span style="color:red">[10K segments]</span>. 
-    - Estonian-English (Et-En) <span style="color:green">[medium resource]</span><span style="color:red">[10K segments]</span>. 
-    - Sinhalese-English (Si-En) <span style="color:green">[low resource]</span><span style="color:red">[10K segments]</span>. 
-    - Nepalese-English (Ne-En)  <span style="color:green">[low resource]</span><span style="color:red">[10K segments]</span>
+    - English-German (En-De)  <span style="color:#1ABC9C">[high resource]</span><span style="color:#6495ED">[10K segments]</span>. 
+    - English-Chinese (En-Zh) <span style="color:#1ABC9C">[high resource]</span><span style="color:#6495ED">[10K segments]</span>. 
+    - Romanian-English (Ro-En) <span style="color:#1ABC9C">[medium resource]</span><span style="color:#6495ED">[10K segments]</span>. 
+    - Estonian-English (Et-En) <span style="color:#1ABC9C">[medium resource]</span><span style="color:#6495ED">[10K segments]</span>. 
+    - Sinhalese-English (Si-En) <span style="color:#1ABC9C">[low resource]</span><span style="color:#6495ED">[10K segments]</span>. 
+    - Nepalese-English (Ne-En)  <span style="color:#1ABC9C">[low resource]</span><span style="color:#6495ED">[10K segments]</span>
 
 - a dataset with a combination of Wikipedia articles and Reddit articles for 
-   - Russian-English (Ru-En)  <span style="color:green">[medium resource]</span><span style="color:red">[10K segments]</span>. 
+   - Russian-English (Ru-En)  <span style="color:#1ABC9C">[medium resource]</span><span style="color:#6495ED">[10K segments]</span>. 
    
 - 4 smaller datasets from Wikipedia that were used as blid tests in the WMT 2021 QE Shared Task
-   - English-Czech <span style="color:green">[medium resource]</span><span style="color:red">[1K segments]</span>. 
-   - English-Japanese <span style="color:green">[medium resource]</span><span style="color:red">[1K segments]</span>. 
-   - Pashto-English <span style="color:green">[low resource]</span><span style="color:red">[1K segments]</span>. 
-   - Khmer-English <span style="color:green">[low resource]</span><span style="color:red">[1K segments]</span>. 
+   - English-Czech <span style="color:#1ABC9C">[medium resource]</span><span style="color:#6495ED">[1K segments]</span>. 
+   - English-Japanese <span style="color:#1ABC9C">[medium resource]</span><span style="color:#6495ED">[1K segments]</span>. 
+   - Pashto-English <span style="color:#1ABC9C">[low resource]</span><span style="color:#6495ED">[1K segments]</span>. 
+   - Khmer-English <span style="color:#1ABC9C">[low resource]</span><span style="color:#6495ED">[1K segments]</span>. 
 
 
 
@@ -60,9 +70,10 @@ You can donwload the NMT models used to generate the Wikipedia translations, as 
 The multilingual NMT models used to generate translations for the zero-shot language pairs can be found here: mBART50 (many-to-one for Ps-En and Km-En, and one-to-many for En-Cs and En-Ja).
 
 
-```
-Links for English-Marathi (En-Ma) train data TBA
-```
+
+> #### **Upcoming**
+> Links for English-Marathi (En-Ma) train data TBA
+
 
 
 
