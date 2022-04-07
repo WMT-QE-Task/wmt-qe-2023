@@ -3,8 +3,13 @@ layout: page
 title: 'Task 1: Quality prediction'
 ---
 
+<a href="../index.md" style="float: right;">Home</a>
+
 [<i class="fa-solid fa-house"></i>](../index.md)
 
+<br>
+
+</br>
 
 The quality prediction task follows the trend of the previous years in comprising a **sentence-level subtask** where the goal is to predict the quality score for each source-target sentence pair and a **word-level subtask** where the goal is to predict the translation errors, assigning OK/BAD tags to each word of the target. 
 
@@ -17,7 +22,6 @@ Both subtasks include annotations derived in two different ways, depending on th
 
 # Sentence-level Subtask
 
-The sentence level subtask this year 
 
 ## MQM scores
 
@@ -28,9 +32,13 @@ We will provide test sets for three language pairs annotated with MQM annotation
  - English-German (En-De)
  - Chinese-English (Zh-En)
 
- For training resources see:
+For training resources with MQM annotations it is possible to use any of the resources listed in the "[Additional training resources](../subtasks/resources.md)" section. 
 
- For annotation guidelines see: **TBA**
+We will also release a development set for each language pair. For release dates please consult the [home](../index.md) page
+
+Note that in order to align with the DA annotations the MQM scorfes will be inverted (such that higher score will indicate better quality) and standardized per annotator. The individual annotations from each annotator will also be made available per segment.
+
+For annotation guidelines see: **TBA**
 
 ## DA scores
 
@@ -42,9 +50,17 @@ We will provide test sets for five language pairs annotated with DA scores.
  - Khmer-English (Km-En)
  - Pashto-English (Ps-En)
 
- For training resources see:
+For each language pair a single MT model has been used to translate the source sentences. Specifically, the English-Marathi has been translated with *** while the En-Cs, En-Ja, Km-En and Ps-En were translated using a [multilimgual Transformer NMT model](https://arxiv.org/abs/2008.00401).
 
- For annotation guidelines see:
+
+ For training resources with DA annotations it is possible to use any of the resources listed in the "[Additional training resources](../subtasks/resources.md)" section. 
+
+ Additionally this year we will make available a *new* training dataset for English-Marathi, comprising 30K language pairs.
+
+ We will also release a development set for each language pair. For release dates please consult the [home](../index.md) page
+
+<br>
+</br>
 
 # Word-level Subtask
 
