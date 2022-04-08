@@ -1,6 +1,3 @@
-<a href="https://wmt-qe-task.github.io/" style="float: right;">Home</a>
-&nbsp;&nbsp;&nbsp;
-
 ---
 layout: page
 title: 'Task 2: Explainable QE'
