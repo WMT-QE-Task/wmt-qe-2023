@@ -1,9 +1,12 @@
+<a href="https://wmt-qe-task.github.io/" style="float: right;">Home</a>
+&nbsp;&nbsp;&nbsp;
+
 ---
 layout: page
 title: 'Task 2: Explainable QE'
 ---
 
-<a href="https://wmt-qe-task.github.io/" style="float: right;">Home</a>
+
 
 The main goal of the explainability for QE subtask is to explore the potential of building a quality estimation system that predicts the quality score for an input pair of source text and target MT and is able to provide word-level evidence as explanation for its predictions.
 
