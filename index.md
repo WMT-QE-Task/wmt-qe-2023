@@ -18,7 +18,7 @@ This shared task focuses on automatic methods for estimating the quality of neur
 Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmail.com">Contact Us</a>!
 
 
-## Metrics Task Important Dates
+## Quality Estimation Task Important Dates
 
 |  | Date |
 | ----------- | :-----------: |
@@ -72,6 +72,9 @@ Please check that your system output on the dev data is correctly read by the of
 - Diptesh Kanojia (University of Surrey)
 - Constantin Orasan (University of Surrey)
 - Lucia Specia (Imperial College London)
+- Piyawat Lertvittayakumjorn (Imperial College London)
+- Steffen Eger (Technische Universität Darmstadt)
+
 
 ## Sponsors
 
