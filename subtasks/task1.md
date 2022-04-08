@@ -3,13 +3,8 @@ layout: page
 title: 'Task 1: Quality prediction'
 ---
 
-<a href="../index.md" style="float: right;">Home</a>
+<a href="https://wmt-qe-task.github.io/" style="float: right;">Home</a>
 
-[<i class="fa-solid fa-house"></i>](../index.md)
-
-<br>
-
-</br>
 
 The quality prediction task follows the trend of the previous years in comprising a **sentence-level subtask** where the goal is to predict the quality score for each source-target sentence pair and a **word-level subtask** where the goal is to predict the translation errors, assigning OK/BAD tags to each word of the target. 
 
@@ -59,8 +54,7 @@ For each language pair a single MT model has been used to translate the source s
 
  We will also release a development set for each language pair. For release dates please consult the [home](../index.md) page
 
-<br>
-</br>
+
 
 # Word-level Subtask
 
