@@ -26,4 +26,4 @@ You can find below the links to the previous QE shared task editions, organised 
 
 The Explainable QE shared task was organised in 2021 as an independent shared task in the [Eval4NLP workshop](https://eval4nlp.github.io/) (@EMNLP 2021)
 
-* [2021 Explainable QE task](https://eval4nlp.github.io/sharedtask.html)
+* [2021 Explainable QE task](https://eval4nlp.github.io/2021/sharedtask.html)
