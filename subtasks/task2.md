@@ -23,13 +23,16 @@ For each language pair, the participants can use the sentence-level scores to tr
 > #### **Upcoming**
 > Apart from the language-pairs mentioned above, we will also provide test sets on some **surprise** language-pairs.  Check-back soon!
 
+
 ## Submission
 
 Details on the submission process TBA.
 
+
 ## Evaluation
 
 Details on the evaluation process and metrics TBA.
+
 
 ## Baselines
 
@@ -37,6 +40,7 @@ Following the Eval4NLP shared task, we will provide three baselines.
 - Random explanations
 - [TransQuest](https://aclanthology.org/2020.wmt-1.122.pdf) (as a QE model) + [LIME](https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf) (as an explaner)
 - [XMover](https://aclanthology.org/2020.acl-main.151.pdf) (as a QE model) + [SHAP](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html) (as an explaner)
+
 
 ## Recommended Resources
 
@@ -51,6 +55,7 @@ Following the Eval4NLP shared task, we will provide three baselines.
 - [Captum](https://captum.ai/)
 - [AllenNLP Interpret (Wallace et al., 2019)](https://allennlp.org/interpret)
 - [iNNvestigate (Alber et al., 2019)](https://github.com/albermax/innvestigate)
+
 
 ## References
 
