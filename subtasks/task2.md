@@ -17,7 +17,7 @@ For the explainable QE subtask this year, we will use the same language pairs us
  - Khmer-English (Km-En)
  - Pashto-English (Ps-En)
 
-For each language pair, the participants can use the sentence-level scores to train their QE systems. (Please see the resources listed in the "[Additional training resources](../subtasks/resources.md)" section.) The sentence level scores will be normalised to minimize differences between the MQM and DA scales. The participants will be to provide token-level (i.e., word-level) errors, in the form of a continuous score for each token, as explanations for each predicted sentence score. As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. **The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural data or synthetic data) in order to directly predict word-level errors.** 
+For each language pair, the participants can use the sentence-level scores to train their QE systems. (Please see the resources listed in the "[Additional training resources](../subtasks/resources.md)" section.) The sentence level scores will be normalised to align the score directionality between the MQM and DA scores (since for DA scores higher score signifies better quality and for MQM higher scores signify more (or more serious) translation errors) .The participants will be asked to provide token-level (i.e., word-level) errors, in the form of a continuous score for each token, as explanations for each predicted sentence score. As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. **The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural data or synthetic data) in order to directly predict word-level errors.** 
 
 
 > #### **Upcoming**
@@ -59,7 +59,7 @@ Following the Eval4NLP shared task, we will provide three baselines.
 
 ## References
 
-As this subtask is similar to the [explainable QE shared task](https://eval4nlp.github.io/2021/sharedtask.html) organized by [the Eval4NLP workshop last year](https://eval4nlp.github.io/2021/index.html), we recommend checking [their finding paper](https://aclanthology.org/2021.eval4nlp-1.17/). Apart from that, please find the list of related papers below.
+As this subtask is similar to the [explainable QE shared task](https://eval4nlp.github.io/2021/sharedtask.html) organized by [the Eval4NLP workshop last year](https://eval4nlp.github.io/2021/index.html), we recommend checking [their findings paper](https://aclanthology.org/2021.eval4nlp-1.17/). Apart from that, please find the list of related papers below.
 
 - Christoph Leiter, Piyawat Lertvittayakumjorn, Marina Fomicheva, Wei Zhao, Yang Gao, Steffen Eger (2022). Towards Explainable Evaluation Metrics for Natural Language Generation
 - Scott M. Lundberg, Su-In Lee (2017). A Unified Approach to Interpreting Model Predictions. NIPS2017
