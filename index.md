@@ -74,7 +74,7 @@ Please check that your system output on the dev data is correctly read by the of
 - Frédéric Blain (University of Wolverhampton)
 - Ricardo Rei (INESC-ID, Unbabel)
 - José Souza (Unbabel)
-- Diptesh Kanojia (University of Surrey)
+- Diptesh Kanojia (Surrey Institute for People-Centred AI, University of Surrey)
 - Constantin Orasan (University of Surrey)
 - Lucia Specia (Imperial College London)
 - Piyawat Lertvittayakumjorn (Imperial College London)
@@ -118,5 +118,8 @@ Please check that your system output on the dev data is correctly read by the of
 	   </div>
 	   <div class="column">
 	     <img src="/public/css/Imperial.jpeg" height=70px width=auto>
+	   </div>
+	   <div class="column">
+	     <img src="/public/css/AI_Institute_logo_horizontal_green_0092A0_hires.svg" height=70px width=auto>
 	   </div>
 	</div>
