@@ -22,11 +22,16 @@ Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmai
 
 |  | Date |
 | ----------- | :-----------: |
-| Release of training and dev data | TBA |
+| Release of training data | 30 May 2022 |
+| Release of dev data | TBA |
 | Release of test data | TBA |
 | Submission platform open |TBA|
 | Submission of test predictions deadline | TBA |
 | Announcement of results | TBA |
+| Paper submission deadline to WMT | 7th September, 2022 |
+| WMT Notification of acceptance | 9th October, 2022 |
+| WMT Camera-ready deadline | 16th October, 2022 |
+| WMT Conference | 	7th - 8th December, 2022 |
 
 ## Goals
 

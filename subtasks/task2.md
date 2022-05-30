@@ -11,13 +11,13 @@ For the explainable QE subtask this year, we will use the same language pairs us
  - English-Russian (En-Ru)
  - English-German (En-De)
  - Chinese-English (Zh-En)
- - English-Marathi (En-Ma)
+ - English-Marathi (En-Mr)
  - English-Czech (En-Cs)
  - English-Japanese (En-Ja)
  - Khmer-English (Km-En)
  - Pashto-English (Ps-En)
 
-For each language pair, the participants can use the sentence-level scores to train their QE systems. (Please see the resources listed in the "[Additional training resources](../subtasks/resources.md)" section.) The sentence level scores will be normalised to align the score directionality between the MQM and DA scores (since for DA scores higher score signifies better quality and for MQM higher scores signify more (or more serious) translation errors) .The participants will be asked to provide token-level (i.e., word-level) errors, in the form of a continuous score for each token, as explanations for each predicted sentence score. As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. **The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural data or synthetic data) in order to directly predict word-level errors.** 
+For each language pair, the participants can use the sentence-level scores to train their QE systems, available [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask). (Please see the resources listed in the "[Additional training resources](../subtasks/resources.md)" section for more details.) The sentence level scores will be normalised to align the score directionality between the MQM and DA scores (since for DA scores higher score signifies better quality and for MQM higher scores signify more (or more serious) translation errors) .The participants will be asked to provide token-level (i.e., word-level) errors, in the form of a continuous score for each token, as explanations for each predicted sentence score. As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. **The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural data or synthetic data) in order to directly predict word-level errors.** 
 
 
 > #### **Upcoming**

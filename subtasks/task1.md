@@ -3,8 +3,6 @@ layout: page
 title: 'Task 1: Quality prediction'
 ---
 
-
-
 The quality prediction task follows the trend of the previous years in comprising a **sentence-level subtask** where the goal is to predict the quality score for each source-target sentence pair and a **word-level subtask** where the goal is to predict the translation errors, assigning OK/BAD tags to each word of the target. 
 
 Both subtasks include annotations derived in two different ways, depending on the language pair: direct assessments (DA), following the trend of the previous years, and multi-dimensional quality metrics (MQM), introduced for the first time in the QE shared task. Detailed information for the language pairs, the annotation specifics, and the available training and development resources in each category are provided below. We also note that the sentence- and word-level subtasks use the same source-target sentences for each language pair.
@@ -16,7 +14,7 @@ Both subtasks include annotations derived in two different ways, depending on th
 
 # Sentence-level Subtask
 
-The **training data** for the sentence level task can be downloaded [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask).
+> ``❗`` The **training data** for the sentence level task can be downloaded [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask).
 ## MQM scores
 
 
@@ -38,7 +36,7 @@ For annotation guidelines see: **TBA**
 
 We will provide test sets for five language pairs annotated with DA scores. 
 
- - English-Marathi (En-Ma)
+ - English-Marathi (En-Mr)
  - English-Czech (En-Cs)
  - English-Japanese (En-Ja)
  - Khmer-English (Km-En)
@@ -53,6 +51,17 @@ Apart from the provided training data, for training resources with DA annotation
 
  We will also release a development set for each language pair. For release dates please consult the [home](../index.md) page
 
+---
+
+## Evaluation
+
+Sentence-level submissions will be evaluated using the Spearman's rank correlation coefficient to estimate correlation with the human scores (z-normalized scores). Pearson's correlation coefficient as well as MAE and RMSE will also be used as secondary metrics.
+
+The evaluation will focus on multilingual systems, i.e. systems that are able to provide predictions for all languages, including the zero-shot ones. Therefore, average Spearman correlation across all these languages will be used to rank QE systems. We will also evaluate QE systems on a per-language basis for those interested in particular languages, and a per annotation schema scenario (comparing performance on MQM and DA separately).
+
+
+
+---
 ## Submission Format
 
 We expect a single .tsv file for each submitted QE system output (submitted online in the respective codalab competition).
@@ -76,18 +85,68 @@ Each field should be delimited by a single tab character.
 
 # Word-level Subtask
 
+
+> ``❗`` The **training data** for the sentence level task can be downloaded [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/word-level-subtask).
+
 The word-level subtask evaluates the application of QE for post-editing purposes. It consists of predicting word-level tags for the target side (to detect mistranslated or missing words). Each token is tagged as either OK or BAD. 
 
 The OK/BAD tags are provided for each of the language of the sentence level task, and are derived from MQM annotations and post-edited sentences respectively. 
 
-<div class="panel panel-info">
-**Note**
-{: .panel-heading}
-<div class="panel-body">
 
-NOTE DESCRIPTION
+---
+##  Tagging conventions 
+The OK/BAD tags on the target sentence are annotated as follows: 
+* If a target token is (part of) a mistranslation of the correspong source token(s) it obtains the tag BAD. 
+* If a token is completely irrelevant to the source (wrong insertion) it also obtains the tag BAD. 
+* If there is one or more missing token(s) between two correctly translated tokens in the target then the token on the right should be annotated as bad. All other correctly translated tokens should be tagged as OK.
 
-</div>
-</div>
+> ``📝`` Apart from the sentence tokens, an additional  \<EOS> token is appended to the end of each target sentence to represent potentially missing tokens that should have been inserted at the end of the sentence.
 
-Apart from the sentence tokens, an additional  \<EOS> token is appended to the end of each target setntence to represent potentially missing tokens that should havebeen inserted at the end of the sentence.
+
+---
+## Tagging specifications by annotation type
+
+As we have language pairs with different annotation schemes this year, the training data is derived differentky and follows different conventions for MQM and post-edited sentences.
+### **MQM:**
+For the En-De and Zh-En language pairs we did not have any token-level information for deletions (missing tokens on the target side), hence all \<EOS> tokens are tagged as OK and all there are no BAD tags related to deletion errors. 
+
+The En-Ru data included annotations for missing tokens on the target side, hence it includes such token-level information.
+
+> ``📝`` **NOTE:** The dev and test data for the MQM word-level tasks will follow the En-Ru setup.
+
+
+### **Post-Edits:**
+For the post edited data the word-level tags for the target side include mistranslation/insertion and deletion errors as descibed in the beginning. The code used to process the data and obtain the files can be found on [this github repository](https://github.com/deep-spin/qe-corpus-builder).
+
+
+---
+
+## Evaluation
+
+For word-level QE, the submissions will be evaluated in terms of MCC (Matthews correlation coefficient) as a primary metric. F1 scores will also be calculated and used as secondary evaluation metrics. 
+
+The evaluation will focus on multilingual systems, i.e. systems that are able to provide predictions for all languages, including the zero-shot ones. We will also evaluate QE systems on a per-language basis for those interested in particular languages, and a per annotation schema scenario (comparing performance on MQM and post-edits separately).
+
+---
+## Submission Format
+
+
+We request a single *.tsv* file for each word-level QE system. You can submit different systems for any of the MQM or post-edited language pairs independently. The output of your system should be labels at the word-level formatted in the following way:
+
+Line 1: \<DISK FOOTRPINT (in bytes, without compression)>
+
+Line 2: \<NUMBER OF PARAMETERS> 
+
+Lines 3-n where -n is the number of test samples:
+\<LANGUAGE PAIR> \<METHOD NAME> \<SEGMENT NUMBER> \<WORD INDEX> \<WORD> \<BINARY SCORE>
+
+Where:
+
+* **LANGUAGE PAIR** is the ID (e.g., en-de) of the language pair.
+* **METHOD NAME** is the name of your quality estimation method.
+* **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring (starting at 0).
+* **WORD INDEX** is the index of the word in the tokenised sentence, as given in the training/test sets (starting at 0). This will be the word index within the MT sentence.
+* **WORD** actual word or \<EOS> token
+* **BINARY SCORE** is either 'OK' for no issue or 'BAD' for any issue.
+
+Each field should be delimited by a single tab character.
