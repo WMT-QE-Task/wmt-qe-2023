@@ -31,7 +31,7 @@ For each language pair, a submission is a zip file consisting of three files.
     - The first line contains your team name. You might use your CodaLab username as your team name.
     - The second line contains a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants.
 - `sentence.submission` with sentence-level scores, one score per line.
-- `target.submission` with target token-level binary labels. Each line must contain a sequence of scores separated by white space. The number of scores must correspond to the number of target tokens. These token-level scores must represent the importance of each token towards the sentence-level prediction, where a higher score means the token is more likely to be an error. Note that the scores do not need to be normalized.
+- `target.submission` with target token-level scores. Each line must contain a sequence of scores separated by white space. The number of scores must correspond to the number of target tokens. These token-level scores must represent the importance of each token towards the sentence-level prediction, where a higher score means the token is more likely to be an error. Note that the scores do not need to be normalized.
 
 
 ## Evaluation
