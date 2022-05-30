@@ -11,6 +11,29 @@ Both subtasks include annotations derived in two different ways, depending on th
 > #### **Important**
 > Participants will be able to submit predictions for **any** of the subtasks/language pairs of their choice (or all of them). There will also be a **multilingual** phase of the competition covering all languages, to encourage development of multilingual systems.
 
+# Summary of data for 2022 shared task
+
+> ``❗`` The **training data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask). We provide an overview of the datasets, annotations and LPs below. For more information check also the individual task tabs and the additional data.
+
+
+| Language Pair | Sentence-level score type| Word-level annotation | Train set and size  | Dev set and size  | Test set and size  |
+|--------------------------|----------------------|-----------------------|---------------------------|-------------------|--------------------|
+| English-Russian (En-Ru)  | MQM                  | MQM Binary: OK/BAD             | Metrics 2021: <br /> Newstest&rightarrow;7K,  <br />  Tedtalks&rightarrow;8K      | TBA               | TBA - 1K                 |
+| English-German (En-De)   | MQM                  |  MQM Binary: OK/BAD           | Metrics 2020: 11K <br /> Metrics 2021: Newstest&rightarrow;7K, <br /> Tedtaks&rightarrow;8K | TBA               | TBA - 1K                 |
+| Chinese-English (Zh-En)  | MQM                  |  MQM Binary: OK/BAD         | Metrics 2020: 15K <br /> Metrics 2021: <br /> Newstest&rightarrow;8K <br /> Tedtalks&rightarrow;8K | TBA               | TBA - 1K                 |
+| English-Marathi (En-Mr)  | DA                   | Post-editing Binary: OK/BAD  | **NEW**❗ 26K                    | **NEW**❗ 1K            | TBA - 1K               |
+| English-Czech (En-Cs)    | DA                   | Post-editing Binary: OK/BAD  | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
+| English-Japanese (En-Ja) | DA                   | Post-editing Binary: OK/BAD   | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
+| Khmer-English (Km-En)    | DA                   | Post-editing Binary: OK/BAD   | No training set           | MLQE-PE Test 21 1K | TBA - 1K |
+| Pashto-English (Ps-En)   | DA                   | Post-editing Binary: OK/BAD   | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
+| English-German (En-De)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
+| English-Chinese (En-Zh)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
+| Esthonian-English (Et-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
+| Nepali-English (Ne-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
+| Romanian-English (Ro-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
+| Russian-English (Ru-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
+| Sinhala-English (Si-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
+| Surprise LP  | DA                   | Binary: OK/BAD           | – (zero-shot)             | – (zero-shot)     | TBA - 1K       |
 
 # Sentence-level Subtask
 
