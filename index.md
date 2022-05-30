@@ -120,6 +120,6 @@ Please check that your system output on the dev data is correctly read by the of
 	     <img src="/public/css/Imperial.jpeg" height=70px width=auto>
 	   </div>
 	   <div class="column">
-	     <img src="/public/css/AI_Institute_logo_horizontal_green_0092A0_hires.svg" height=70px width=auto>
+	     <img src="/public/css/surrey.jpeg" height=70px width=auto>
 	   </div>
 	</div>
