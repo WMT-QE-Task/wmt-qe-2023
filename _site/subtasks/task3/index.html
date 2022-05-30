@@ -65,10 +65,16 @@
       
         
           
-            <a class="sidebar-nav-item" href="/subtasks/previous/">Previous Editions & Resources</a>
+            <a class="sidebar-nav-item" href="/subtasks/previous/">Previous Editions</a>
           
         
-            <a class="sidebar-nav-item" href="/subtasks/resources/">Available resources </a>
+      
+        
+          
+            <a class="sidebar-nav-item" href="/subtasks/resources/">Additional training resources</a>
+          
+        
+      
         
           
             <a class="sidebar-nav-item" href="/subtasks/task1/">Task 1: Quality prediction</a>
@@ -103,11 +109,83 @@
     <div class="content container">
       <div class="page">
   <h1 class="page-title">Task 3: Critical Error Detection</h1>
-  <ul>
-  <li><a href="/">Home</a></li>
+  <p>The goal of this task is to predict sentence-level binary scores indicating whether or not a translation contains a critical error. Translations with such errors are defined as translations that deviate in meaning as compared to the source sentence in such a way that they are misleading and may carry health, safety, legal, reputation, religious or financial implications. Meaning deviations from the source sentence can happen in three ways:</p>
+
+<p>Mistranslation: critical content is translated incorrectly into a different meaning.
+Hallucination: critical content that is not in the source is introduced in the translation, for example, addition of content that is not present in the source.
+Deletion: critical content that is in the source sentence is not present in the translation.</p>
+
+<p>We focus on a set of critical error categories:</p>
+
+<ul>
+  <li>Additions: Deviation where the translation content is only partially supported by the source.</li>
+  <li>Deletions: Deviation where part of the source sentence is ignored by the MT engine.</li>
+  <li>Named Entities: Deviation in named entities. A named entity (people, organization, location, etc.) is deleted, mistranslated by either another incorrect named entity or a common word or gibberish.</li>
+  <li>Meaning: Deviation in sentence meaning. The MT either introduces or removes a negation and the sentence meaning is completely reversed.</li>
+  <li>Numbers: Deviation in units. The MT translated a number/date/time or unit incorrectly</li>
 </ul>
 
-<p>TBA</p>
+<p>Examples:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">source</th>
+      <th style="text-align: center">Translation</th>
+      <th style="text-align: center">Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">A questão, em última análise, é saber porque deve a Alemanha tentar reduzir o seu excedente de transacções correntes.</td>
+      <td style="text-align: center">The question, <strong>ultimately, is which is not so simple: Is there an effective excuse</strong> why Germany should seek to reduce its current-account deficit surplus.</td>
+      <td style="text-align: center">ADD</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Alguns observadores, <strong>como o Presidente do Banco do Japão Haruhiko Kuroda,</strong> sugeriram que a China podia considerar o reforço dos controlos.</td>
+      <td style="text-align: center">A few observers, have suggested that China might consider tightening controls.</td>
+      <td style="text-align: center">DEL</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Na verdade, as mulheres ocupam apenas 14% das posições dos conselhos de direcção Europeus.</td>
+      <td style="text-align: center">Indeed, women hold only 14% of positions on <strong>US</strong> corporate boards.</td>
+      <td style="text-align: center">NE</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Os exportadores Chineses foram apanhados na tenaz da fraca procura externa e dos salários nacionais em rápido crescimento.</td>
+      <td style="text-align: center">Chinese exporters are caught between the pincers of weak foreign demand and rapidly <strong>lower</strong> domestic wages.</td>
+      <td style="text-align: center">MEAN</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Por exemplo, os povos indígenas constituem apenas 5% da população global, mas representam 15% da população pobre mundial.</td>
+      <td style="text-align: center">For example, indigenous peoples constitute just <strong>0.7%</strong> of the global population, but account for 15% of the world’s poor.</td>
+      <td style="text-align: center">NUM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="training-and-development-data">Training and development data:</h4>
+<p>Data consists of News articles containing instances in the following languages:</p>
+<ul>
+  <li>Portuguese into English</li>
+  <li>English into German</li>
+</ul>
+
+<p><strong>Note:</strong> For the Enlgish into German we do not have any Meaning errors!</p>
+
+<h4 id="test-data">Test data:</h4>
+<p>Approximately 500 sentence pairs for each language pair are provided (News domain).</p>
+
+<p><strong>The data is extremely unbalanced because in practice these phenomenas are rare and for that reason difficult to detect in a reliable way.</strong></p>
+
+<h4 id="baseline">Baseline:</h4>
+<p>XLM-R base model for sequence classification (More details on the baseline soon!)</p>
+
+<h4 id="evaluation">Evaluation:</h4>
+<p>Submissions will be evaluated in terms of standard classification metrics, with MCC as the main metric. These are the <a href="https://github.com/sheffieldnlp/qe-eval-scripts/blob/master/wmt21/sent_evaluate_CED.py">official evaluation scripts</a>.</p>
+
+<h4 id="previous-edition">Previous Edition</h4>
+<p>This subtask is similar to the <a href="https://www.statmt.org/wmt21/quality-estimation-task.html">Critical Error Detection shared task organized last year</a>, we recommend checking their findings paper. Nonetheless, note that the domain is totally different from last years shared task and the annotations also differ.</p>
 
 </div>
 
