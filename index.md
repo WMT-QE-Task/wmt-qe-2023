@@ -17,18 +17,18 @@ This shared task focuses on automatic methods for estimating the quality of neur
   
 Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmail.com">Contact Us</a>!
 
-
+> ``❗`` The **training data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask). We provide an overview of the datasets, annotations and LPs below. For more information check also the individual task tabs and the additional data.
 ## Quality Estimation Task Important Dates
 
 |  | Date |
 | ----------- | :-----------: |
-| Release of training data | 30 May 2022 |
+| Release of training data | 30th May, 2022 |
 | Release of dev data | TBA |
-| Release of test data | TBA |
-| Submission platform open |TBA|
-| Submission of test predictions deadline | TBA |
+| Release of test data | 21th July, 2022 |
+| Submission of test predictions deadline | 4th August, 2022 |
 | Announcement of results | TBA |
-| Paper submission deadline to WMT | 7th September, 2022 |
+| System description submission deadline | 18th August, 2022 |
+| Paper submission deadline to WMT | 7th August, 2022 |
 | WMT Notification of acceptance | 9th October, 2022 |
 | WMT Camera-ready deadline | 16th October, 2022 |
 | WMT Conference | 	7th - 8th December, 2022 |
