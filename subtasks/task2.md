@@ -65,6 +65,7 @@ Following the Eval4NLP shared task, we will provide three baselines.
 As this subtask is similar to the [explainable QE shared task](https://eval4nlp.github.io/2021/sharedtask.html) organized by [the Eval4NLP workshop last year](https://eval4nlp.github.io/2021/index.html), we recommend checking [their findings paper](https://aclanthology.org/2021.eval4nlp-1.17/). Apart from that, please find the list of related papers below.
 
 - Christoph Leiter, Piyawat Lertvittayakumjorn, Marina Fomicheva, Wei Zhao, Yang Gao, Steffen Eger (2022). Towards Explainable Evaluation Metrics for Natural Language Generation
+- Marina Fomicheva, Piyawat Lertvittayakumjorn, Wei Zhao, Steffen Eger, Yang Gao (2021). The Eval4NLP Shared Task on Explainable Quality Estimation: Overview and Results 
 - Scott M. Lundberg, Su-In Lee (2017). A Unified Approach to Interpreting Model Predictions. NIPS2017
 - Tharindu Ranasinghe, Constantin Orasan, Ruslan Mitkov (2020). TransQuest at WMT2020: Sentence-Level Direct Assessment
 - Tharindu Ranasinghe, Constantin Orasan, Ruslan Mitkov (2020). TransQuest: Translation Quality Estimation with Cross-lingual Transformers
