@@ -3,5 +3,50 @@ layout: page
 title: 'Task 3: Critical Error Detection'
 ---
 
+The goal of this task is to predict sentence-level binary scores indicating whether or not a translation contains a critical error. Translations with such errors are defined as translations that deviate in meaning as compared to the source sentence in such a way that they are misleading and may carry health, safety, legal, reputation, religious or financial implications. Meaning deviations from the source sentence can happen in three ways:
 
-Details for this task TBA.
+Mistranslation: critical content is translated incorrectly into a different meaning.
+Hallucination: critical content that is not in the source is introduced in the translation, for example, addition of content that is not present in the source.
+Deletion: critical content that is in the source sentence is not present in the translation.
+
+
+We focus on a set of critical error categories:
+
+- Additions: Deviation where the translation content is only partially supported by the source.
+- Deletions: Deviation where part of the source sentence is ignored by the MT engine. 
+- Named Entities: Deviation in named entities. A named entity (people, organization, location, etc.) is deleted, mistranslated by either another incorrect named entity or a common word or gibberish.
+- Meaning: Deviation in sentence meaning. The MT either introduces or removes a negation and the sentence meaning is completely reversed.
+- Numbers: Deviation in units. The MT translated a number/date/time or unit incorrectly
+
+Examples:
+
+| source | Translation | Label |
+| :----: |  :--------: |  :---: |
+| A questão, em última análise, é saber porque deve a Alemanha tentar reduzir o seu excedente de transacções correntes. | The question, **ultimately, is which is not so simple: Is there an effective excuse** why Germany should seek to reduce its current-account deficit surplus. | ADD |
+| Alguns observadores, **como o Presidente do Banco do Japão Haruhiko Kuroda,** sugeriram que a China podia considerar o reforço dos controlos. | A few observers, have suggested that China might consider tightening controls. | DEL |
+| Na verdade, as mulheres ocupam apenas 14% das posições dos conselhos de direcção Europeus. | Indeed, women hold only 14% of positions on **US** corporate boards. | NE |
+| Os exportadores Chineses foram apanhados na tenaz da fraca procura externa e dos salários nacionais em rápido crescimento. | Chinese exporters are caught between the pincers of weak foreign demand and rapidly **lower** domestic wages. | MEAN |
+| Por exemplo, os povos indígenas constituem apenas 5% da população global, mas representam 15% da população pobre mundial. | For example, indigenous peoples constitute just **0.7%** of the global population, but account for 15% of the world’s poor. | NUM | 
+
+#### Training and development data:
+Data consists of News articles containing instances in the following languages:
+- Portuguese into English
+- English into German
+
+**Note:** For the Enlgish into German we do not have any Meaning errors!
+
+#### Test data: 
+Approximately 500 sentence pairs for each language pair are provided (News domain).
+
+
+**The data is extremely unbalanced because in practice these phenomenas are rare and for that reason difficult to detect in a reliable way.**
+
+#### Baseline: 
+XLM-R base model for sequence classification (More details on the baseline soon!)
+
+#### Evaluation: 
+Submissions will be evaluated in terms of standard classification metrics, with MCC as the main metric. These are the [official evaluation scripts](https://github.com/sheffieldnlp/qe-eval-scripts/blob/master/wmt21/sent_evaluate_CED.py).
+
+
+#### Previous Edition
+This subtask is similar to the [Critical Error Detection shared task organized last year](https://www.statmt.org/wmt21/quality-estimation-task.html), we recommend checking their findings paper. Nonetheless, note that the domain is totally different from last years shared task and the annotations also differ.

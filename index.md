@@ -21,7 +21,7 @@ Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmai
 
 > ``❗`` The .tags files for the DA-QE training data have been updated to fix a bug related to the annotation of BAD \<EOS\> tokens. Please make sure to download again [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/word-level-subtask/DA_QE_data/train_data_2022). 
 
-> ``❗`` The **training data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask). We provide an overview of the datasets, annotations and LPs below. For more information check also the individual task tabs and the additional data.
+> ``❗`` The **training data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/). We provide an overview of the datasets, annotations and LPs below. For more information check also the individual task tabs and the additional data.
 ## Quality Estimation Task Important Dates
 
 |  | Date |

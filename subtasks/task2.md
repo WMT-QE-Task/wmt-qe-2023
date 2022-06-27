@@ -3,8 +3,7 @@ layout: page
 title: 'Task 2: Explainable QE'
 ---
 
-
-The main goal of the explainability for QE subtask is to explore the potential of building a quality estimation system that predicts the quality score for an input pair of source text and target MT and is able to provide word-level evidence as explanation for its predictions. In particular, for each pair of source and target sentences, participating teams are asked to provide (1) a sentence-level score estimating the translation quality and (2) a list of token-level scores where the tokens with the highest scores are expected to correspond to translation errors considered relevant by human annotators. 
+In this subtask, we propose to address translation error identification as rationale extraction. Instead of training a dedicated word-level model, the goal is to infer translation errors as an explanation for sentence-level quality scores. In particular, for each pair of source and target sentences, participating teams are asked to provide (1) a sentence-level score estimating the translation quality and (2) a list of continuous token-level scores where the tokens with the highest scores are expected to correspond to translation errors considered relevant by human annotators.
 
 For the explainable QE subtask this year, we will use the same language pairs used in [Task 1](../subtasks/task1.md):
 
@@ -17,7 +16,7 @@ For the explainable QE subtask this year, we will use the same language pairs us
  - Khmer-English (Km-En)
  - Pashto-English (Ps-En)
 
-For each language pair, the participants can use the sentence-level scores to train their QE systems, available [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask). (Please see the resources listed in the "[Additional training resources](../subtasks/resources.md)" section for more details.) The sentence level scores will be normalised to align the score directionality between the MQM and DA scores (since for DA scores higher score signifies better quality and for MQM higher scores signify more (or more serious) translation errors). The participants will be asked to provide token-level (i.e., word-level) errors, in the form of a continuous score for each token, as explanations for each predicted sentence score. As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. **The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural data or synthetic data) in order to directly predict word-level errors.** 
+For each language pair, the participants can use the sentence-level scores to train their QE systems, available [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask). (Please see the resources listed in the "[Additional training resources](../subtasks/resources.md)" section for more details.) As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. **The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural or synthetic data) in order to directly predict word-level errors.** 
 
 
 > #### **Upcoming**
@@ -36,17 +35,14 @@ For each language pair, a submission is a zip file consisting of three files.
 
 ## Evaluation
 
-This task focuses on assessing the quality of explanations, not sentence-level predictions. Therefore, **the main metrics for evaluation will be AUC, Average Precision, and Recall at Top-K scores for token-level explanations.** Since the explanations are required to correspond to translation errors, these statistics will be computed for **the subset of translations that contain errors according to human annotation**.
-
-Besides, for sentence-level predictions, we will calculate Pearson's correlation as a metric for analysis purposes only (not used for deciding the winner). 
-
+To evaluate the submitted approaches, we will measure how well the token-level scores provided by the participants correspond with human word-level error annotation. Specific set of evaluation metrics is TBD. 
 
 ## Baselines
 
 Following the Eval4NLP shared task, we will provide three baselines.
 - Random explanations
-- [TransQuest](https://aclanthology.org/2020.wmt-1.122.pdf) (as a QE model) + [LIME](https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf) (as an explaner)
-- [XMover](https://aclanthology.org/2020.acl-main.151.pdf) (as a QE model) + [SHAP](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html) (as an explaner)
+- [TransQuest](https://aclanthology.org/2020.wmt-1.122.pdf) (as a QE model) + [LIME](https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf) (as an explainer)
+- [XMover](https://aclanthology.org/2020.acl-main.151.pdf) (as a QE model) + [SHAP](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html) (as an explainer)
 
 
 ## Recommended Resources

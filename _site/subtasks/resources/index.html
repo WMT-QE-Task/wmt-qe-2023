@@ -11,7 +11,7 @@
 
   <title>
     
-      Available Resources &middot; WMT QE Shared Task
+      Additional training resources &middot; WMT QE Shared Task
     
   </title>
 
@@ -65,10 +65,16 @@
       
         
           
-            <a class="sidebar-nav-item active" href="/subtasks/previous/">Previous Editions & Resources</a>
+            <a class="sidebar-nav-item" href="/subtasks/previous/">Previous Editions</a>
           
         
-            <a class="sidebar-nav-item" href="/subtasks/resources/">Available resources </a>
+      
+        
+          
+            <a class="sidebar-nav-item active" href="/subtasks/resources/">Additional training resources</a>
+          
+        
+      
         
           
             <a class="sidebar-nav-item" href="/subtasks/task1/">Task 1: Quality prediction</a>
@@ -102,13 +108,23 @@
 
     <div class="content container">
       <div class="page">
-  <h1 class="page-title">Available Resources</h1>
-  <p>*</p>
-<ul>
-  <li><a href="/">Home</a></li>
-</ul>
+  <h1 class="page-title">Additional training resources</h1>
+  <p><a href="/">Home</a></p>
 
-<p>TBA</p>
+<p>We provide below links to additional resources that can be used for training/augmentation.</p>
+
+<h1 id="task-1-quality-prediction">Task 1: Quality Prediction</h1>
+
+<p>## DA annotation data</p>
+
+<p>For the subtasks using <strong>DA annotations</strong> participants can use the annotations provided for the <em>Quality Estimation Shared Tasks</em> of the previous year(s) available on the MLQE-PE <a href="https://github.com/sheffieldnlp/mlqe-pe">github page</a>. For a full description of the abvailable language pairs and annotations please read the <a href="https://arxiv.org/abs/2010.04480">MLQE-PE paper</a>.</p>
+
+<p>The datasets were collected by translating sentences sampled from source language articles using state-of-the-art Transformer NMT models and annotated with a variant of Direct Assessment (DA) scores by professional translators. Each sentence was annotated following the FLORES setup, which presents a form of DA, where at least three professional translators rate each sentence from 0-100 according to the perceived translation quality. DA scores are standardised using the z-score by rater. Participating systems are required to score sentences according to z-standardised DA scores.</p>
+
+<p>You can donwload the NMT models used to generate the Wikipedia translations, as well as the Ru-En Wikipedia/Reddit NMT model. Here are details on the training data used to build the Ru-En model. The zero-shot translations were produced by a multilimgual Transformer NMT model.
+The multilingual NMT models used to generate translations for the zero-shot language pairs can be found here: mBART50 (many-to-one for Ps-En and Km-En, and one-to-many for En-Cs and En-Ja).</p>
+
+<p>It is also possible to use the DA annotations that were created for the Metrics shared tasks in the previous years.</p>
 
 </div>
 

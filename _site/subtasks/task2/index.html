@@ -65,10 +65,16 @@
       
         
           
-            <a class="sidebar-nav-item" href="/subtasks/previous/">Previous Editions & Resources</a>
+            <a class="sidebar-nav-item" href="/subtasks/previous/">Previous Editions</a>
           
         
-            <a class="sidebar-nav-item" href="/subtasks/resources/">Available resources </a>
+      
+        
+          
+            <a class="sidebar-nav-item" href="/subtasks/resources/">Additional training resources</a>
+          
+        
+      
         
           
             <a class="sidebar-nav-item" href="/subtasks/task1/">Task 1: Quality prediction</a>
@@ -103,12 +109,91 @@
     <div class="content container">
       <div class="page">
   <h1 class="page-title">Task 2: Explainable QE</h1>
-  <ul>
-  <li><a href="/">Home</a></li>
+  <p>The main goal of the explainability for QE subtask is to explore the potential of building a quality estimation system that predicts the quality score for an input pair of source text and target MT and is able to provide word-level evidence as explanation for its predictions. In particular, for each pair of source and target sentences, participating teams are asked to provide (1) a sentence-level score estimating the translation quality and (2) a list of token-level scores where the tokens with the highest scores are expected to correspond to translation errors considered relevant by human annotators.</p>
+
+<p>For the explainable QE subtask this year, we will use the same language pairs used in <a href="/subtasks/task1/">Task 1</a>:</p>
+
+<ul>
+  <li>English-Russian (En-Ru)</li>
+  <li>English-German (En-De)</li>
+  <li>Chinese-English (Zh-En)</li>
+  <li>English-Marathi (En-Mr)</li>
+  <li>English-Czech (En-Cs)</li>
+  <li>English-Japanese (En-Ja)</li>
+  <li>Khmer-English (Km-En)</li>
+  <li>Pashto-English (Ps-En)</li>
 </ul>
 
-<p>TBA</p>
+<p>For each language pair, the participants can use the sentence-level scores to train their QE systems, available <a href="https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask">here</a>. (Please see the resources listed in the “<a href="/subtasks/resources/">Additional training resources</a>” section for more details.) The sentence level scores will be normalised to align the score directionality between the MQM and DA scores (since for DA scores higher score signifies better quality and for MQM higher scores signify more (or more serious) translation errors). The participants will be asked to provide token-level (i.e., word-level) errors, in the form of a continuous score for each token, as explanations for each predicted sentence score. As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. <strong>The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural data or synthetic data) in order to directly predict word-level errors.</strong></p>
 
+<blockquote>
+  <h4 id="upcoming"><strong>Upcoming</strong></h4>
+  <p>Apart from the language-pairs mentioned above, we will also provide test sets on some <strong>surprise</strong> language-pairs.  Check-back soon!</p>
+</blockquote>
+
+<h2 id="submission">Submission</h2>
+
+<p>For each language pair, a submission is a zip file consisting of three files.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">metadata.txt</code> must have exactly two non-empty lines.
+    <ul>
+      <li>The first line contains your team name. You might use your CodaLab username as your team name.</li>
+      <li>The second line contains a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">sentence.submission</code> with sentence-level scores, one score per line.</li>
+  <li><code class="language-plaintext highlighter-rouge">target.submission</code> with target token-level scores. Each line must contain a sequence of scores separated by white space. The number of scores must correspond to the number of target tokens. These token-level scores must represent the importance of each token towards the sentence-level prediction, where a higher score means the token is more likely to be an error. Note that the scores do not need to be normalized.</li>
+</ul>
+
+<h2 id="evaluation">Evaluation</h2>
+
+<p>This task focuses on assessing the quality of explanations, not sentence-level predictions. Therefore, <strong>the main metrics for evaluation will be AUC, Average Precision, and Recall at Top-K scores for token-level explanations.</strong> Since the explanations are required to correspond to translation errors, these statistics will be computed for <strong>the subset of translations that contain errors according to human annotation</strong>.</p>
+
+<p>Besides, for sentence-level predictions, we will calculate Pearson’s correlation as a metric for analysis purposes only (not used for deciding the winner).</p>
+
+<h2 id="baselines">Baselines</h2>
+
+<p>Following the Eval4NLP shared task, we will provide three baselines.</p>
+<ul>
+  <li>Random explanations</li>
+  <li><a href="https://aclanthology.org/2020.wmt-1.122.pdf">TransQuest</a> (as a QE model) + <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf">LIME</a> (as an explaner)</li>
+  <li><a href="https://aclanthology.org/2020.acl-main.151.pdf">XMover</a> (as a QE model) + <a href="https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html">SHAP</a> (as an explaner)</li>
+</ul>
+
+<h2 id="recommended-resources">Recommended Resources</h2>
+
+<h3 id="quality-estimation-systems">Quality Estimation Systems</h3>
+<ul>
+  <li><a href="https://github.com/TharinduDR/TransQuest">TransQuest (Ranasinghe et al. 2020)</a></li>
+  <li><a href="https://github.com/sheffieldnlp/deepQuest">deepQuest (Kepler et al. 2019)</a></li>
+  <li><a href="https://github.com/Unbabel/OpenKiwi">OpenKiwi</a></li>
+</ul>
+
+<h3 id="post-hoc-explainability-tools">Post-Hoc Explainability Tools</h3>
+<ul>
+  <li><a href="https://github.com/marcotcr/lime">LIME (Ribeiro et al., 2016)</a></li>
+  <li><a href="https://github.com/slundberg/shap">SHAP (Lundberg and Lee, 2017)</a></li>
+  <li><a href="https://captum.ai/">Captum</a></li>
+  <li><a href="https://allennlp.org/interpret">AllenNLP Interpret (Wallace et al., 2019)</a></li>
+  <li><a href="https://github.com/albermax/innvestigate">iNNvestigate (Alber et al., 2019)</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<p>As this subtask is similar to the <a href="https://eval4nlp.github.io/2021/sharedtask.html">explainable QE shared task</a> organized by <a href="https://eval4nlp.github.io/2021/index.html">the Eval4NLP workshop last year</a>, we recommend checking <a href="https://aclanthology.org/2021.eval4nlp-1.17/">their findings paper</a>. Apart from that, please find the list of related papers below.</p>
+
+<ul>
+  <li>Christoph Leiter, Piyawat Lertvittayakumjorn, Marina Fomicheva, Wei Zhao, Yang Gao, Steffen Eger (2022). Towards Explainable Evaluation Metrics for Natural Language Generation</li>
+  <li>Scott M. Lundberg, Su-In Lee (2017). A Unified Approach to Interpreting Model Predictions. NIPS2017</li>
+  <li>Tharindu Ranasinghe, Constantin Orasan, Ruslan Mitkov (2020). TransQuest at WMT2020: Sentence-Level Direct Assessment</li>
+  <li>Tharindu Ranasinghe, Constantin Orasan, Ruslan Mitkov (2020). TransQuest: Translation Quality Estimation with Cross-lingual Transformers</li>
+  <li>Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin. (2016). “Why Should I Trust You?”: Explaining the Predictions of Any Classifier</li>
+  <li>Wei Zhao, Goran Glavaš, Maxime Peyrard, Yang Gao, Robert West, Steffen Eger. (2020). On the Limitations of Cross-lingual Encoders as Exposed by Reference-Free Machine Translation Evaluation</li>
+  <li>Marina Fomicheva, Shuo Sun, Erick Fonseca, Frédéric Blain, Vishrav Chaudhary, Francisco Guzmán, Nina Lopatina, Lucia Specia, André F. T. Martins. (2020) MLQE-PE: A Multilingual Quality Estimation and Post-Editing Dataset</li>
+  <li>Mo Yu, Shiyu Chang, Yang Zhang, Tommi Jaakkola (2019). Rethinking Cooperative Rationalization: Introspective Extraction and Complement Control</li>
+  <li>Mukund Sundararajan, Ankur Taly, Qiqi Yan (2017). Axiomatic Attribution for Deep Networks</li>
+  <li>Eric Wallace, Jens Tuyls, Junlin Wang, Sanjay Subramanian, Matt Gardner, Sameer Singh (2019). AllenNLP Interpret: A Framework for Explaining Predictions of NLP Models</li>
+</ul>
 
 </div>
 
