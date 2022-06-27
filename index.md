@@ -7,6 +7,8 @@ layout: home
 
 # Welcome to the 2022 Quality Estimation Shared Task!
 
+> ``❗`` Please also register to the QE-DA google-group [here](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive immediate updates announcements and ask us questions.
+
 This shared task focuses on automatic methods for estimating the quality of neural machine translation output at run-time, without relying on reference translations. It will cover estimation at sentence and word levels. This year we introduce the following new elements:
 
 - Updated quality annotation scheme: quality annotations for the majority of the tasks are now based on <strong>Multidimentional Quality Metrics (MQM)</strong> instead of direct assessments.
@@ -16,6 +18,8 @@ This shared task focuses on automatic methods for estimating the quality of neur
 - Updated catastrophic error detection task: TBA.
   
 Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmail.com">Contact Us</a>!
+
+> ``❗`` The .tags files for the DA-QE training data have been updated to fix a bug related to the annotation of BAD \<EOS\> tokens. Please make sure to download again [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/word-level-subtask/DA_QE_data/train_data_2022). 
 
 > ``❗`` The **training data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask). We provide an overview of the datasets, annotations and LPs below. For more information check also the individual task tabs and the additional data.
 ## Quality Estimation Task Important Dates
