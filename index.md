@@ -32,7 +32,7 @@ Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmai
 | Submission of test predictions deadline | 4th August, 2022 |
 | Announcement of results | TBA |
 | System description submission deadline | 18th August, 2022 |
-| Paper submission deadline to WMT | 7th August, 2022 |
+| Paper submission deadline to WMT | 7th September, 2022 |
 | WMT Notification of acceptance | 9th October, 2022 |
 | WMT Camera-ready deadline | 16th October, 2022 |
 | WMT Conference | 	7th - 8th December, 2022 |
