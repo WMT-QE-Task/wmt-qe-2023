@@ -29,7 +29,7 @@ Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmai
 | Release of training data | 30th May, 2022 |
 | Release of dev data | TBA |
 | Release of test data | 21th July, 2022 |
-| Submission of test predictions deadline | 4th August, 2022 |
+| Submission of test predictions deadline | ~~4th August, 2022~~ <span style="color:red">16th August, 2022</span> | 
 | Announcement of results | TBA |
 | System description submission deadline | 18th August, 2022 |
 | Paper submission deadline to WMT | 7th September, 2022 |
