@@ -49,7 +49,7 @@ Following the Eval4NLP shared task, we will provide three baselines.
 
 ### Quality Estimation Systems
 - [TransQuest (Ranasinghe et al. 2020)](https://github.com/TharinduDR/TransQuest)
-- deepQuest-py (Alva-Manchego et al., 2021)](https://github.com/sheffieldnlp/deepQuest-py)
+- [deepQuest-py (Alva-Manchego et al., 2021)](https://github.com/sheffieldnlp/deepQuest-py)
 - [OpenKiwi](https://github.com/Unbabel/OpenKiwi)
 
 ### Post-Hoc Explainability Tools
