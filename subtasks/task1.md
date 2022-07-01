@@ -47,11 +47,11 @@ We will provide test sets for three language pairs annotated with MQM annotation
  - English-German (En-De)
  - Chinese-English (Zh-En)
 
-For training resources with MQM annotations it is possible to use any of the resources listed in the "[Additional training resources](../subtasks/resources.md)" section or directly download the . 
+For training resources with MQM annotations it is possible to use any of the resources listed in the "[Additional training resources](../subtasks/resources.md)" section or directly download the data from the [github page](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask/MQM_QE_data/train_data_2022). 
 
 We will also release a development set for each language pair. For release dates please consult the [home](../index.md) page
 
-Note that in order to align with the DA annotations the MQM scorfes will be inverted (such that higher score will indicate better quality) and standardized per annotator. The individual annotations from each annotator will also be made available per segment.
+Note that in order to align with the DA annotations the MQM scores will be inverted (such that higher score will indicate better quality) and standardized per annotator. The individual annotations from each annotator will also be made available per segment.
 
 For annotation guidelines see: **TBA**
 
@@ -113,15 +113,16 @@ Each field should be delimited by a single tab character.
 
 The word-level subtask evaluates the application of QE for post-editing purposes. It consists of predicting word-level tags for the target side (to detect mistranslated or missing words). Each token is tagged as either OK or BAD. 
 
-The OK/BAD tags are provided for each of the language of the sentence level task, and are derived from MQM annotations and post-edited sentences respectively. 
+The OK/BAD tags are provided for each of the language pairs of the sentence level task, and are derived from either MQM annotations (En-De, Zh-En and En-Ru) or post-edited sentences. 
 
 
 ---
 ##  Tagging conventions 
 The OK/BAD tags on the target sentence are annotated as follows: 
-* If a target token is (part of) a mistranslation of the correspong source token(s) it obtains the tag BAD. 
+* If a target token is (part of) a mistranslation of the corresponding source token(s) it obtains the tag BAD. 
 * If a token is completely irrelevant to the source (wrong insertion) it also obtains the tag BAD. 
-* If there is one or more missing token(s) between two correctly translated tokens in the target then the token on the right should be annotated as bad. All other correctly translated tokens should be tagged as OK.
+* If there is one or more missing token(s) between two tokens in the target (translation) then the token on the right of the ommision (where the missing token(s) should have been inserted) should be annotated as BAD (regardless of whether that token is correct or not). 
+* All other correctly translated tokens should be tagged as OK.
 
 > ``📝`` Apart from the sentence tokens, an additional  \<EOS> token is appended to the end of each target sentence to represent potentially missing tokens that should have been inserted at the end of the sentence.
 
@@ -129,9 +130,9 @@ The OK/BAD tags on the target sentence are annotated as follows:
 ---
 ## Tagging specifications by annotation type
 
-As we have language pairs with different annotation schemes this year, the training data is derived differentky and follows different conventions for MQM and post-edited sentences.
+As we have language pairs with different annotation schemes this year, the training data is derived differently and follows different conventions for MQM and post-edited sentences.
 ### **MQM:**
-For the En-De and Zh-En language pairs we did not have any token-level information for deletions (missing tokens on the target side), hence all \<EOS> tokens are tagged as OK and all there are no BAD tags related to deletion errors. 
+For the En-De and Zh-En language pairs we did not have any token-level information for deletions (missing tokens on the target side), hence all \<EOS> tokens are tagged as OK and there are no BAD tags related to deletion errors. 
 
 The En-Ru data included annotations for missing tokens on the target side, hence it includes such token-level information.
 
@@ -154,7 +155,7 @@ The evaluation will focus on multilingual systems, i.e. systems that are able to
 ## Submission Format
 
 
-We request a single *.tsv* file for each word-level QE system. You can submit different systems for any of the MQM or post-edited language pairs independently. The output of your system should be labels at the word-level formatted in the following way:
+We request a single *.tsv* file for each word-level QE system. You can submit different systems for any of the MQM or post-edited language pairs independently. The output of your system should be the predicted word-level tags, formatted in the following way:
 
 Line 1: \<DISK FOOTRPINT (in bytes, without compression)>
 

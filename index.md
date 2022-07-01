@@ -7,7 +7,7 @@ layout: home
 
 # Welcome to the 2022 Quality Estimation Shared Task!
 
-> ``❗`` Please also register to the QE-DA google-group [here](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive immediate updates announcements and ask us questions.
+> ``❗`` Please also register to the QE google-group [here](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive updates and announcements immediately, and ask us questions.
 
 This shared task focuses on automatic methods for estimating the quality of neural machine translation output at run-time, without relying on reference translations. It will cover estimation at sentence and word levels. This year we introduce the following new elements:
 
