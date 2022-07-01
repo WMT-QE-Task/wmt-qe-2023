@@ -14,7 +14,7 @@ This shared task focuses on automatic methods for estimating the quality of neur
 - Updated quality annotation scheme: quality annotations for the majority of the tasks are now based on <strong>Multidimentional Quality Metrics (MQM)</strong> instead of direct assessments.
 - MQM annotated data aligned with the  <a href="https://wmt-metrics-task.github.io/">Metrics shared task</a>: we share part of the data used in this year's Metrics task, to promote research that bridges the two domains.
 - <strong>New language pairs:</strong> we introduce a novel dataset on English-Marathi, with sentence level and word level annotations (direct assesments).
-- An <strong>explability subtask</strong>, following up on the first edition of Eval4NLP shared task.
+- An <strong>explainability subtask</strong>, following up on the first edition of Eval4NLP shared task.
 - Updated catastrophic error detection task: TBA.
   
 Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmail.com">Contact Us</a>!
