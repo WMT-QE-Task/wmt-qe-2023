@@ -65,7 +65,7 @@ We will provide test sets for five language pairs annotated with DA scores.
  - Khmer-English (Km-En)
  - Pashto-English (Ps-En)
 
-For each language pair a single MT model has been used to translate the source sentences. Specifically, the English-Marathi has been translated with the model available [here](*), while the En-Cs, En-Ja, Km-En and Ps-En were translated using a [multilingual Transformer NMT model](https://arxiv.org/abs/2008.00401).
+For each language pair a single MT model has been used to translate the source sentences. Specifically, the English-Marathi has been translated with the English-Indic model available [here](https://indicnlp.ai4bharat.org/indic-trans/), while the En-Cs, En-Ja, Km-En and Ps-En were translated using a [multilingual Transformer NMT model](https://arxiv.org/abs/2008.00401).
 
 
 Apart from the provided training data, for training resources with DA annotations it is possible to use any of the resources listed in the "[Additional training resources](../subtasks/resources.md)" section. 
