@@ -27,8 +27,8 @@ Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmai
 |  | Date |
 | ----------- | :-----------: |
 | Release of training data | 30th May, 2022 |
-| Release of dev data | TBA |
-| Release of test data | 21th July, 2022 |
+| Release of dev data | 18th July, 2022 |
+| Release of test data | ~~21th July, 2022~~  <span style="color:red">8th August, 2022</span>|
 | Submission of test predictions deadline | ~~4th August, 2022~~ <span style="color:red">16th August, 2022</span> | 
 | Announcement of results | TBA |
 | System description submission deadline | 18th August, 2022 |
@@ -83,6 +83,7 @@ Please check that your system output on the dev data is correctly read by the of
 - Lucia Specia (Imperial College London)
 - Piyawat Lertvittayakumjorn (Imperial College London)
 - Steffen Eger (Technische Universität Darmstadt)
+- DDuarte Miguel Rodrigues dos Santos Marques Alves (Instituto Superior Técnico (IST) )
 
 
 ## Sponsors
