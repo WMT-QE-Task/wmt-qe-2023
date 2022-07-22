@@ -110,7 +110,7 @@
       <div class="page">
   <h1 class="page-title">Task 3: Critical Error Detection</h1>
   <blockquote>
-  <p><code class="language-plaintext highlighter-rouge">❗</code> Since these errors are artificially created we will ask Participants to say if they used or not the given training data (<em>unconstrained &amp; constrained settings</em>). The baseline results using the provided training data are really high indicating that the task is easy for a model that has access to training data that was created in a similar way. Nonetheless a traditional QE system trained on DA’s has a hard time finding which sentences where modified. For a <em>constrained</em> setting we will ask participants to submit systems that are purely trained on quality annotations such as DA’s, MQM and/or HTER. A strong QE system should be robust to these artificially created errors while maintaining a high correlation with human judgments!</p>
+  <p><code class="language-plaintext highlighter-rouge">❗</code> Since these errors are artificially created we strongly encourage participants not to use the training data and if so, we will split participants into <em>unconstrained &amp; constrained settings</em>. The baseline results using the provided training data are really high, indicating that the task is easy for a model that has access to training data that was created in a the same way. Nonetheless a traditional QE system trained on DA’s has a hard time finding which sentences where modified. For a <em>constrained</em> setting we will ask participants to submit systems that are purely trained on quality annotations such as DA’s, MQM and/or HTER. A strong QE system should be robust to these artificially created errors while maintaining a high correlation with human judgments!</p>
 </blockquote>
 
 <p>The goal of this task is to predict sentence-level binary scores indicating whether or not a translation contains a critical error. Translations with such errors are defined as translations that deviate in meaning as compared to the source sentence in such a way that they are misleading and may carry health, safety, legal, reputation, religious or financial implications. Meaning deviations from the source sentence can happen in three ways:</p>
@@ -191,7 +191,9 @@ Deletion: critical content that is in the source sentence is not present in the 
 <p>For the <em>Constrained</em> baseline we rank data according to the scores produced by <code class="language-plaintext highlighter-rouge">wmt21-comet-qe-mqm</code> and anything below a certain threshold is assigned a BAD tag. A perfect QE system should easily rank segments with critical errors below the other translations.</p>
 
 <h4 id="evaluation">Evaluation:</h4>
-<p>Submissions will be evaluated in terms of standard classification metrics, with MCC as the main metric. These are the <a href="https://github.com/sheffieldnlp/qe-eval-scripts/blob/master/wmt21/sent_evaluate_CED.py">official evaluation scripts</a>.</p>
+<p>Submissions will be evaluated in terms of ranking. We ask participants to provide a score for each sentence and a threshold that separates Good translations from Bad ones. We will analyse the precision recall curve given the scores provided.</p>
+
+<p>TBA: Evaluation script for <code class="language-plaintext highlighter-rouge">wmt21-comet-qe-mqm</code>.</p>
 
 <h4 id="previous-edition">Previous Edition</h4>
 <p>This subtask is similar to the <a href="https://www.statmt.org/wmt21/quality-estimation-task.html">Critical Error Detection shared task organized last year</a>, we recommend checking their findings paper. Nonetheless, note that the domain is totally different from last years shared task and the annotations also differ.</p>
