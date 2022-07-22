@@ -2,6 +2,7 @@
 layout: page
 title: 'Task 3: Critical Error Detection'
 ---
+> ``❗`` Since these errors are artificially created we will ask Participants to say if they used or not the given training data (_unconstrained & constrained settings_). The baseline results using the provided training data are really high indicating that the task is easy for a model that has access to training data that was created in a similar way. Nonetheless a traditional QE system trained on DA's has a hard time finding which sentences where modified. For a _constrained_ setting we will ask participants to submit systems that are purely trained on quality annotations such as DA's, MQM and/or HTER. A strong QE system should be robust to these artificially created errors while maintaining a high correlation with human judgments!
 
 The goal of this task is to predict sentence-level binary scores indicating whether or not a translation contains a critical error. Translations with such errors are defined as translations that deviate in meaning as compared to the source sentence in such a way that they are misleading and may carry health, safety, legal, reputation, religious or financial implications. Meaning deviations from the source sentence can happen in three ways:
 
@@ -35,14 +36,17 @@ Data consists of News articles containing instances in the following languages:
 
 **Note:** For the Enlgish into German we do not have any Meaning errors!
 
+
 #### Test data: 
 Approximately 500 sentence pairs for each language pair are provided (News domain).
 
-
 **The data is extremely unbalanced because in practice these phenomenas are rare and for that reason difficult to detect in a reliable way.**
 
-#### Baseline: 
-XLM-R base model for sequence classification (More details on the baseline soon!)
+#### Baselines: 
+- _Unconstrained_ XLM-R base model for sequence classification
+- _Constrained_ [wmt21-comet-qe-mqm](https://github.com/Unbabel/COMET/blob/master/METRICS.md#wmt21-comet-metrics)
+
+For the _Constrained_ baseline we rank data according to the scores produced by `wmt21-comet-qe-mqm` and anything below a certain threshold is assigned a BAD tag. A perfect QE system should easily rank segments with critical errors below the other translations.
 
 #### Evaluation: 
 Submissions will be evaluated in terms of standard classification metrics, with MCC as the main metric. These are the [official evaluation scripts](https://github.com/sheffieldnlp/qe-eval-scripts/blob/master/wmt21/sent_evaluate_CED.py).
