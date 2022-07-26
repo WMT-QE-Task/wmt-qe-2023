@@ -184,16 +184,105 @@ Deletion: critical content that is in the source sentence is not present in the 
 
 <h4 id="baselines">Baselines:</h4>
 <ul>
-  <li><em>Unconstrained</em> XLM-R base model for sequence classification</li>
+  <li><em>Unconstrained</em> XLM-R large model for sequence classification</li>
   <li><em>Constrained</em> <a href="https://github.com/Unbabel/COMET/blob/master/METRICS.md#wmt21-comet-metrics">wmt21-comet-qe-mqm</a></li>
 </ul>
 
 <p>For the <em>Constrained</em> baseline we rank data according to the scores produced by <code class="language-plaintext highlighter-rouge">wmt21-comet-qe-mqm</code> and anything below a certain threshold is assigned a BAD tag. A perfect QE system should easily rank segments with critical errors below the other translations.</p>
 
 <h4 id="evaluation">Evaluation:</h4>
-<p>Submissions will be evaluated in terms of ranking. We ask participants to provide a score for each sentence and a threshold that separates Good translations from Bad ones. We will analyse the precision recall curve given the scores provided.</p>
+<p>Submissions will be evaluated in terms of ranking. We ask participants to provide a score for each sentence and a threshold will be used separate Good translations from Bad ones. We will analyse the Recall@K and MCC given the scores provided.</p>
 
-<p>TBA: Evaluation script for <code class="language-plaintext highlighter-rouge">wmt21-comet-qe-mqm</code>.</p>
+<p>The official evaluation script for this task can be found <a href="https://github.com/WMT-QE-Task/wmt-qe-2022-data/blob/main/critical-errors-subtask/official_evaluation.py">here</a></p>
+
+<p><em>Constrained</em>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python official_evaluation.py <span class="nt">-s</span> <span class="o">{</span>YOUR-SYSTEM-SCORES<span class="o">}</span>.txt <span class="nt">-l</span> en-de-dev/dev.label <span class="nt">-c</span>
+</code></pre></div></div>
+
+<p><em>Unconstrained</em>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python official_evaluation.py <span class="nt">-s</span> <span class="o">{</span>YOUR-SYSTEM-SCORES<span class="o">}</span>.txt <span class="nt">-l</span> en-de-dev/dev.label <span class="nt">-u</span>
+</code></pre></div></div>
+
+<h4 id="baseline-results">Baseline Results:</h4>
+
+<p>Results for en-de Dev Set <em>Constrained</em> baseline:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">MCC@5.50</th>
+      <th style="text-align: center">Recall@5.50</th>
+      <th style="text-align: center">Precision@5.50</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0.1076</td>
+      <td style="text-align: center">0.1567</td>
+      <td style="text-align: center">0.1567</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Results for the en-pt Dev Set</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">MCC@5.48</th>
+      <th style="text-align: center">Recall@5.48</th>
+      <th style="text-align: center">Precision@5.48</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0.0727</td>
+      <td style="text-align: center">0.1235</td>
+      <td style="text-align: center">0.1235</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example for en-de <em>Constrained</em>:</p>
+
+<p>Results for en-de Dev Set <em>Unconstrained</em> baseline:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">MCC@5.50</th>
+      <th style="text-align: center">Recall@5.50</th>
+      <th style="text-align: center">Precision@5.50</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0.8943</td>
+      <td style="text-align: center">0.9001</td>
+      <td style="text-align: center">0.9001</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Results for the en-pt Dev Set</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">MCC@5.48</th>
+      <th style="text-align: center">Recall@5.48</th>
+      <th style="text-align: center">Precision@5.48</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0.8955</td>
+      <td style="text-align: center">0.9012</td>
+      <td style="text-align: center">0.9012</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="previous-edition">Previous Edition</h4>
 <p>This subtask is similar to the <a href="https://www.statmt.org/wmt21/quality-estimation-task.html">Critical Error Detection shared task organized last year</a>, we recommend checking their findings paper. Nonetheless, note that the domain is totally different from last years shared task and the annotations also differ.</p>

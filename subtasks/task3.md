@@ -43,15 +43,55 @@ Approximately 500 sentence pairs for each language pair are provided (News domai
 **The data is extremely unbalanced because in practice these phenomenas are rare and for that reason difficult to detect in a reliable way.**
 
 #### Baselines: 
-- _Unconstrained_ XLM-R base model for sequence classification
+- _Unconstrained_ XLM-R large model for sequence classification
 - _Constrained_ [wmt21-comet-qe-mqm](https://github.com/Unbabel/COMET/blob/master/METRICS.md#wmt21-comet-metrics)
 
 For the _Constrained_ baseline we rank data according to the scores produced by `wmt21-comet-qe-mqm` and anything below a certain threshold is assigned a BAD tag. A perfect QE system should easily rank segments with critical errors below the other translations.
 
 #### Evaluation: 
-Submissions will be evaluated in terms of ranking. We ask participants to provide a score for each sentence and a threshold that separates Good translations from Bad ones. We will analyse the precision recall curve given the scores provided. 
+Submissions will be evaluated in terms of ranking. We ask participants to provide a score for each sentence and a threshold will be used separate Good translations from Bad ones. We will analyse the Recall@K and MCC given the scores provided. 
 
-TBA: Evaluation script for `wmt21-comet-qe-mqm`.
+The official evaluation script for this task can be found [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/blob/main/critical-errors-subtask/official_evaluation.py)
+
+_Constrained_:
+
+```bash
+python official_evaluation.py -s {YOUR-SYSTEM-SCORES}.txt -l en-de-dev/dev.label -c
+```
+
+_Unconstrained_:
+```bash
+python official_evaluation.py -s {YOUR-SYSTEM-SCORES}.txt -l en-de-dev/dev.label -u
+```
+
+#### Baseline Results:
+
+Results for en-de Dev Set _Constrained_ baseline:
+
+| MCC@5.50 | Recall@5.50 | Precision@5.50 | 
+|:----: | :----: | :----: |
+| 0.1076 |	0.1567 | 0.1567 |
+
+Results for the en-pt Dev Set 
+
+| MCC@5.48 | Recall@5.48 | Precision@5.48 |
+|:----: | :----: | :----: | 
+|  0.0727 | 0.1235 | 0.1235 |
+
+Example for en-de _Constrained_:
+
+Results for en-de Dev Set _Unconstrained_ baseline:
+
+| MCC@5.50 | Recall@5.50 | Precision@5.50 | 
+|:----: | :----: | :----: |
+| 0.8943 |	0.9001 | 0.9001|
+
+Results for the en-pt Dev Set 
+
+| MCC@5.48 | Recall@5.48 | Precision@5.48 |
+|:----: | :----: | :----: | 
+| 0.8955 |	0.9012	| 0.9012 | 
+
 
 #### Previous Edition
 This subtask is similar to the [Critical Error Detection shared task organized last year](https://www.statmt.org/wmt21/quality-estimation-task.html), we recommend checking their findings paper. Nonetheless, note that the domain is totally different from last years shared task and the annotations also differ.
