@@ -19,10 +19,14 @@ This shared task focuses on automatic methods for estimating the quality of neur
   
 Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmail.com">Contact Us</a>!
 
+> ``❗`` The **test data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/qe-test-data-2022). Please read the updated formatting instructions as well.
+
 > ``❗`` The .tags files for the DA-QE training data have been updated to fix a bug related to the annotation of BAD \<EOS\> tokens. Please make sure to download again [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/word-level-subtask/DA_QE_data/train_data_2022). 
 
 > ``❗`` The **training data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/). We provide an overview of the datasets, annotations and LPs below. For more information check also the individual task tabs and the additional data.
-## Quality Estimation Task Important Dates
+
+
+## Quality Estimation Task Important Dates (AoE)
 
 |  | Date |
 | ----------- | :-----------: |
@@ -53,9 +57,9 @@ Participants are also allowed to explore any additional data and resources deeme
 
 ### Subtasks:
 
-1. [Quality prediction](./subtasks/task1/): **TBA**
-2. [Explainable Quality Estimation](./subtasks/task2/): **TBA**
-3. [Critical Error Detection](./subtasks/task3/): **TBA**
+1. [Quality prediction](./subtasks/task1/)
+2. [Explainable Quality Estimation](./subtasks/task2/)
+3. [Critical Error Detection](./subtasks/task3/)
 
 ## Submission Information
 The shared task competition will take place on CODALAB. Details **TBA**
@@ -67,7 +71,7 @@ Here are some open source software for QE that might be useful for participants:
 - TransQuest
 
 ## Submission Requirements
-Each participating team can submit at most 15 systems for each of the language pairs of each subtask, except for the multilingual track of tasks 1 & 2 (10 systems max). These should be submitted to a CODALAB page for each subtask.
+Each participating team can submit at most 10 systems for each of the language pairs of each subtask. These should be submitted to a CODALAB page for each subtask.
 Please check that your system output on the dev data is correctly read by the official evaluation scripts.
 
 ## Organization:

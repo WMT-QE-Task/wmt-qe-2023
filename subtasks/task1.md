@@ -86,8 +86,12 @@ The evaluation will focus on multilingual systems, i.e. systems that are able to
 
 ---
 ## Submission Format
+For each submission you wish to make (under "Participate>Submit" on codalab), please upload a **single zip** file with the predictions and the system metadata. 
 
-We expect a single .tsv file for each submitted QE system output (submitted online in the respective codalab competition).
+For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empty lines which are for the teamname and the short system description, respectively.
+The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
+
+For the **predictions** we expect a single .tsv file for each submitted QE system output (submitted online in the respective codalab competition).
 
 The file should be formatted with the two first lines indicating model size, and the rest containing predicted scores, one per line for each sentence, as follows:
 
@@ -95,7 +99,7 @@ Line 1: <DISK FOOTRPINT (in bytes, without compression)>
 
 Line 2: \<NUMBER OF PARAMETERS>
 
-Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 0 if there is no ensemble)
+Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 1 if there is no ensemble)
 
 Lines 4-n where -n is the number of test samples:
 \<LANGUAGE PAIR> \<METHOD NAME> \<SEGMENT NUMBER> \<SEGMENT SCORE> 
@@ -156,6 +160,12 @@ The evaluation will focus on multilingual systems, i.e. systems that are able to
 ---
 ## Submission Format
 
+For each submission you wish to make, both in the DA and MQM competitions, please upload a **single zip** file with the predictions and the system metadata (under "Participate>Submit" on codalab). 
+
+For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empty lines which are for the teamname and the short system description, respectively.
+The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
+
+For the **predictions** we expect a single .tsv file for each submitted QE system output (submitted online in the respective codalab competition).
 
 We request a single *.tsv* file for each word-level QE system. You can submit different systems for any of the MQM or post-edited language pairs independently. The output of your system should be the predicted word-level tags, formatted in the following way:
 
@@ -163,7 +173,7 @@ Line 1: \<DISK FOOTRPINT (in bytes, without compression)>
 
 Line 2: \<NUMBER OF PARAMETERS> 
 
-Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 0 if there is no ensemble)
+Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 1 if there is no ensemble)
 
 Lines 4-n where -n is the number of test samples:
 \<LANGUAGE PAIR> \<METHOD NAME> \<SEGMENT NUMBER> \<WORD INDEX> \<WORD> \<BINARY SCORE>
