@@ -18,9 +18,9 @@ Both subtasks include annotations derived in two different ways, depending on th
 
 | Language Pair | Sentence-level score type| Word-level annotation | Train set and size  | Dev set and size  | Test set and size  |
 |--------------------------|----------------------|-----------------------|---------------------------|-------------------|--------------------|
-| English-Russian (En-Ru)  | MQM                  | MQM Binary: OK/BAD             | Metrics 2021: <br /> Newstest ➝ 7K,  <br />  Tedtalks ➝ 8K      | TBA               | TBA - 1K                 |
-| English-German (En-De)   | MQM                  |  MQM Binary: OK/BAD           | Metrics 2020: 11K <br /> Metrics 2021: Newstest ➝ 7K, <br /> Tedtaks ➝ 8K | TBA               | TBA - 1K                 |
-| Chinese-English (Zh-En)  | MQM                  |  MQM Binary: OK/BAD         | Metrics 2020: 15K <br /> Metrics 2021: <br /> Newstest ➝ 8K <br /> Tedtalks ➝ 8K | TBA               | TBA - 1K                 |
+| English-Russian (En-Ru)  | MQM                  | MQM Binary: OK/BAD             | Metrics 2021: <br /> Newstest ➝ 7K,  <br />  Tedtalks ➝ 8K      | 1K               | TBA - 1K                 |
+| English-German (En-De)   | MQM                  |  MQM Binary: OK/BAD           | Metrics 2020: 11K <br /> Metrics 2021: Newstest ➝ 7K, <br /> Tedtaks ➝ 8K | 1K               | TBA - 1K                 |
+| Chinese-English (Zh-En)  | MQM                  |  MQM Binary: OK/BAD         | Metrics 2020: 15K <br /> Metrics 2021: <br /> Newstest ➝ 8K <br /> Tedtalks ➝ 8K | 1K               | TBA - 1K                 |
 | English-Marathi (En-Mr)  | DA                   | Post-editing Binary: OK/BAD  | **NEW**❗ 26K                    | **NEW**❗ 1K            | TBA - 1K               |
 | English-Czech (En-Cs)    | DA                   | Post-editing Binary: OK/BAD  | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
 | English-Japanese (En-Ja) | DA                   | Post-editing Binary: OK/BAD   | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
