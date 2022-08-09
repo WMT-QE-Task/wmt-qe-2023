@@ -95,7 +95,9 @@ Line 1: <DISK FOOTRPINT (in bytes, without compression)>
 
 Line 2: \<NUMBER OF PARAMETERS>
 
-Lines 3-n where -n is the number of test samples:
+Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 0 if there is no ensemble)
+
+Lines 4-n where -n is the number of test samples:
 \<LANGUAGE PAIR> \<METHOD NAME> \<SEGMENT NUMBER> \<SEGMENT SCORE> 
 
 Where:
@@ -161,7 +163,9 @@ Line 1: \<DISK FOOTRPINT (in bytes, without compression)>
 
 Line 2: \<NUMBER OF PARAMETERS> 
 
-Lines 3-n where -n is the number of test samples:
+Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 0 if there is no ensemble)
+
+Lines 4-n where -n is the number of test samples:
 \<LANGUAGE PAIR> \<METHOD NAME> \<SEGMENT NUMBER> \<WORD INDEX> \<WORD> \<BINARY SCORE>
 
 Where:
