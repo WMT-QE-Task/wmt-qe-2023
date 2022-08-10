@@ -91,9 +91,9 @@ For each submission you wish to make (under "Participate>Submit" on codalab), pl
 For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empty lines which are for the teamname and the short system description, respectively.
 The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
 
-For the **predictions** we expect a single .tsv file for each submitted QE system output (submitted online in the respective codalab competition).
+For the **predictions** we expect a single TSV file for each submitted QE system output (submitted online in the respective codalab competition), named 'predictions.txt'. 
 
-The file should be formatted with the two first lines indicating model size, and the rest containing predicted scores, one per line for each sentence, as follows:
+The file should be formatted with the two first lines indicating model size, then indication of ensemble model number,and the rest containing predicted scores, one per line for each sentence, as follows:
 
 Line 1: <DISK FOOTRPINT (in bytes, without compression)>
 
@@ -165,9 +165,9 @@ For each submission you wish to make, both in the DA and MQM competitions, pleas
 For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empty lines which are for the teamname and the short system description, respectively.
 The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
 
-For the **predictions** we expect a single .tsv file for each submitted QE system output (submitted online in the respective codalab competition).
+For the **predictions** we expect a single TSV file for each submitted QE system output (submitted online in the respective codalab competition), named 'predictions.txt'.
 
-We request a single *.tsv* file for each word-level QE system. You can submit different systems for any of the MQM or post-edited language pairs independently. The output of your system should be the predicted word-level tags, formatted in the following way:
+You can submit different systems for any of the MQM or post-edited language pairs independently. The output of your system should be the predicted word-level tags, formatted in the following way:
 
 Line 1: \<DISK FOOTRPINT (in bytes, without compression)>
 
