@@ -19,12 +19,13 @@ This shared task focuses on automatic methods for estimating the quality of neur
   
 Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmail.com">Contact Us</a>!
 
+
+
 > ``❗`` The **test data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/qe-test-data-2022). Please read the updated formatting instructions as well.
 
 > ``❗`` The .tags files for the DA-QE training data have been updated to fix a bug related to the annotation of BAD \<EOS\> tokens. Please make sure to download again [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/word-level-subtask/DA_QE_data/train_data_2022). 
 
 > ``❗`` The **training data** for all tasks and subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/). We provide an overview of the datasets, annotations and LPs below. For more information check also the individual task tabs and the additional data.
-
 
 ## Quality Estimation Task Important Dates (AoE)
 
@@ -62,7 +63,16 @@ Participants are also allowed to explore any additional data and resources deeme
 3. [Critical Error Detection](./subtasks/task3/)
 
 ## Submission Information
-The shared task competition will take place on CODALAB. Details **TBA**
+The shared task competition will take place on CODALAB. 
+
+Task 1:
+- Sentence level DA: [https://codalab.lisn.upsaclay.fr/competitions/6841](https://codalab.lisn.upsaclay.fr/competitions/6841)
+- Sentence level MQM: [https://codalab.lisn.upsaclay.fr/competitions/6841](https://codalab.lisn.upsaclay.fr/competitions/6842)
+- Word level: TBA
+Task 2:
+- Explainability task: TBA
+Task 3:
+- Critical error detection: TBA
 
 ## Useful Software
 Here are some open source software for QE that might be useful for participants:
