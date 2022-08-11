@@ -70,7 +70,7 @@ Please register with one account per team.
 Task 1:
 - Sentence level DA: [https://codalab.lisn.upsaclay.fr/competitions/6841](https://codalab.lisn.upsaclay.fr/competitions/6841)
 - Sentence level MQM: [https://codalab.lisn.upsaclay.fr/competitions/6866](https://codalab.lisn.upsaclay.fr/competitions/6866)
-- Word level: TBA
+- Word level: [https://codalab.lisn.upsaclay.fr/competitions/6883](https://codalab.lisn.upsaclay.fr/competitions/6883)
 
 
 Task 2:
