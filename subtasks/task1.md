@@ -107,7 +107,7 @@ Lines 4-n where -n is the number of test samples:
 Where:
 * **LANGUAGE PAIR** is the ID (e.g. en-de) of the language pair of the plain text translation file you are scoring. Follow the LP naming convention provided in the test set.
 * **METHOD NAME** is the name of your quality estimation method.
-* **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring.
+* **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring (starting at 0).
 * **SEGMENT SCORE** is the predicted (MQM/DA/HTER/Binary) score for the particular segment.
 
 Each field should be delimited by a single tab character.
