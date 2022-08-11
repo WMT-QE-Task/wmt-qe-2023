@@ -65,15 +65,22 @@ Participants are also allowed to explore any additional data and resources deeme
 ## Submission Information
 The shared task competition will take place on CODALAB. 
 
+Please register with one account per team.
+
 Task 1:
 - Sentence level DA: [https://codalab.lisn.upsaclay.fr/competitions/6841](https://codalab.lisn.upsaclay.fr/competitions/6841)
-- Sentence level MQM: [https://codalab.lisn.upsaclay.fr/competitions/6841](https://codalab.lisn.upsaclay.fr/competitions/6842)
+- Sentence level MQM: [https://codalab.lisn.upsaclay.fr/competitions/6866](https://codalab.lisn.upsaclay.fr/competitions/6866)
 - Word level: TBA
-Task 2:
-- Explainability task: TBA
-Task 3:
-- Critical error detection: TBA
 
+
+Task 2:
+- Explainability task: [https://codalab.lisn.upsaclay.fr/competitions/6863](https://codalab.lisn.upsaclay.fr/competitions/6863)
+
+
+Task 3:
+- Critical error detection: [https://codalab.lisn.upsaclay.fr/competitions/6859](https://codalab.lisn.upsaclay.fr/competitions/6859)
+
+It is not necessary to participate on all tasks/subtasks/phases. Participating teams can choose which tasks/language pairs they want to make submissions for.
 ## Useful Software
 Here are some open source software for QE that might be useful for participants:
 - OpenKiwi
