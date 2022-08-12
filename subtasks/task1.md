@@ -176,12 +176,13 @@ Line 2: \<NUMBER OF PARAMETERS>
 Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 1 if there is no ensemble)
 
 Lines 4-n where -n is the number of test samples:
-\<LANGUAGE PAIR> \<METHOD NAME> \<SEGMENT NUMBER> \<WORD INDEX> \<WORD> \<BINARY SCORE>
+\<LANGUAGE PAIR> \<METHOD NAME> \<TYPE> \<SEGMENT NUMBER> \<WORD INDEX> \<WORD> \<BINARY SCORE>
 
 Where:
 
 * **LANGUAGE PAIR** is the ID (e.g., en-de) of the language pair.
 * **METHOD NAME** is the name of your quality estimation method.
+* **TYPE** should contain 'MT' for all segments.
 * **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring (starting at 0).
 * **WORD INDEX** is the index of the word in the tokenised sentence, as given in the training/test sets (starting at 0). This will be the word index within the MT sentence.
 * **WORD** actual word or \<EOS> token
