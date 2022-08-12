@@ -41,11 +41,11 @@ The official evaluation script for this task can be found [here](https://github.
 
 ## Baselines
 
-Following the Eval4NLP shared task, we will provide three baselines.
+Following the Eval4NLP shared task, we will use the methods below as baselines.
 - Random explanations
 - [TransQuest](https://aclanthology.org/2020.wmt-1.122.pdf) (as a QE model) + [LIME](https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf) (as an explainer) --> Main baseline
 - [XMover](https://aclanthology.org/2020.acl-main.151.pdf) (as a QE model) + [SHAP](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html) (as an explainer)
-
+- NEW: [OpenKiwi](https://aclanthology.org/P19-3020.pdf) (as a QE model) + [LIME](https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf) (as an explainer)
 
 ## Recommended Resources
 
