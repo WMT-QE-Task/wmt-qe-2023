@@ -78,7 +78,7 @@ Task 2:
 
 
 Task 3:
-- Critical error detection: [https://codalab.lisn.upsaclay.fr/competitions/6859](https://codalab.lisn.upsaclay.fr/competitions/6859)
+- Critical error detection: [https://codalab.lisn.upsaclay.fr/competitions/6893](https://codalab.lisn.upsaclay.fr/competitions/6893)
 
 It is not necessary to participate on all tasks/subtasks/phases. Participating teams can choose which tasks/language pairs they want to make submissions for.
 ## Useful Software
