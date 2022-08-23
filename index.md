@@ -93,7 +93,7 @@ Please check that your system output on the dev data is correctly read by the of
 
 ## Organization:
 
-- Chrysoula Zerva (Instituto de Telecomunicações)
+- Chrysoula Zerva (Instituto de Telecomunicações) [chryssa.zrv@gmail.com](chryssa.zrv@gmail.com)
 - André Martins (Instituto de Telecomunicações, Unbabel)
 - Marina Fomicheva (University of Sheffield)
 - Frédéric Blain (University of Wolverhampton)
