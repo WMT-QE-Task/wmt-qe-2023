@@ -7,6 +7,8 @@ layout: home
 
 # Welcome to the 2022 Quality Estimation Shared Task!
 
+> ``❗`` The [results of the 2022 edition](https://www.statmt.org/wmt22/quality-estimation-task_results.html) are available.
+
 > ``❗`` Please also register to the QE google-group [here](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive updates and announcements immediately, and ask us questions.
 
 This shared task focuses on automatic methods for estimating the quality of neural machine translation output at run-time, without relying on reference translations. It will cover estimation at sentence and word levels. This year we introduce the following new elements:
@@ -35,7 +37,7 @@ Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmai
 | Release of dev data | TBA |
 | Release of test data | 21th July, 2022 |
 | Submission of test predictions deadline | ~~4th August, 2022~~ <span style="color:red">16th August, 2022</span> | 
-| Announcement of results | TBA |
+| Announcement of results | <span style="color:red">5th September, 2022</span> |
 | System description submission deadline | ~~18th August~~, <span style="color:red">23rd August 2022</span> |
 | Paper submission deadline to WMT | 7th September, 2022 |
 | WMT Notification of acceptance | 9th October, 2022 |
