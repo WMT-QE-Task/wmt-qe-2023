@@ -13,11 +13,11 @@ layout: home
 
 This shared task focuses on automatic methods for estimating the quality of neural machine translation output at run-time, without relying on reference translations. It will cover estimation at sentence and word levels. This year we introduce the following new elements:
 
-- Updated quality annotation scheme: quality annotations for the majority of the tasks are now based on <strong>Multidimentional Quality Metrics (MQM)</strong> instead of direct assessments.
+- Updated quality annotation scheme: quality annotations for the majority of the tasks are now based on <strong>Multidimensional Quality Metrics (MQM)</strong> instead of direct assessments.
 - MQM annotated data aligned with the  <a href="https://wmt-metrics-task.github.io/">Metrics shared task</a>: we share part of the data used in this year's Metrics task, to promote research that bridges the two domains.
-- <strong>New language pairs:</strong> we introduce a novel dataset on English-Marathi, with sentence level and word level annotations (direct assesments).
+- <strong>New language pairs:</strong> we introduce a novel dataset on English-Marathi, with sentence level and word level annotations (direct assessments).
 - An <strong>explainability subtask</strong>, following up on the first edition of Eval4NLP shared task.
-- Updated catastrophic error detection task: TBA.
+- Updated [catastrophic error detection task](subtasks/task3.md).
   
 Have questions or suggestions? Feel free to <a href="mailto:andre.t.martins@gmail.com">Contact Us</a>!
 
