@@ -18,9 +18,9 @@ Both subtasks include annotations derived in two different ways, depending on th
 
 | Language Pair | Sentence-level score type| Word-level annotation | Train set and size  | Dev set and size  | Test set and size  |
 |--------------------------|----------------------|-----------------------|---------------------------|-------------------|--------------------|
-| English-Russian (En-Ru)  | MQM                  | MQM Binary: OK/BAD             | Metrics 2021: <br /> Newstest ➝ 7K,  <br />  Tedtalks ➝ 8K      | TBA               | TBA - 1K                 |
-| English-German (En-De)   | MQM                  |  MQM Binary: OK/BAD           | Metrics 2020: 11K <br /> Metrics 2021: Newstest ➝ 7K, <br /> Tedtaks ➝ 8K | TBA               | TBA - 1K                 |
-| Chinese-English (Zh-En)  | MQM                  |  MQM Binary: OK/BAD         | Metrics 2020: 15K <br /> Metrics 2021: <br /> Newstest ➝ 8K <br /> Tedtalks ➝ 8K | TBA               | TBA - 1K                 |
+| English-Russian (En-Ru)  | MQM                  | MQM Binary: OK/BAD             | Metrics 2021: <br /> Newstest ➝ 7K,  <br />  Tedtalks ➝ 8K      | 1K               | TBA - 1K                 |
+| English-German (En-De)   | MQM                  |  MQM Binary: OK/BAD           | Metrics 2020: 11K <br /> Metrics 2021: Newstest ➝ 7K, <br /> Tedtaks ➝ 8K | 1K               | TBA - 1K                 |
+| Chinese-English (Zh-En)  | MQM                  |  MQM Binary: OK/BAD         | Metrics 2020: 15K <br /> Metrics 2021: <br /> Newstest ➝ 8K <br /> Tedtalks ➝ 8K | 1K               | TBA - 1K                 |
 | English-Marathi (En-Mr)  | DA                   | Post-editing Binary: OK/BAD  | **NEW**❗ 26K                    | **NEW**❗ 1K            | TBA - 1K               |
 | English-Czech (En-Cs)    | DA                   | Post-editing Binary: OK/BAD  | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
 | English-Japanese (En-Ja) | DA                   | Post-editing Binary: OK/BAD   | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
@@ -65,7 +65,7 @@ We will provide test sets for five language pairs annotated with DA scores.
  - Khmer-English (Km-En)
  - Pashto-English (Ps-En)
 
-For each language pair a single MT model has been used to translate the source sentences. Specifically, the English-Marathi has been translated with the model available [here](*), while the En-Cs, En-Ja, Km-En and Ps-En were translated using a [multilingual Transformer NMT model](https://arxiv.org/abs/2008.00401).
+For each language pair a single MT model has been used to translate the source sentences. Specifically, the English-Marathi has been translated with the English-Indic model available [here](https://drive.google.com/file/d/1itxbV2RqIsduOJ7_7AdUaxTdIddMBmJ2/view?usp=sharing), while the En-Cs, En-Ja, Km-En and Ps-En were translated using a [multilingual Transformer NMT model](https://arxiv.org/abs/2008.00401).
 
 
 Apart from the provided training data, for training resources with DA annotations it is possible to use any of the resources listed in the "[Additional training resources](../subtasks/resources.md)" section. 
@@ -86,22 +86,28 @@ The evaluation will focus on multilingual systems, i.e. systems that are able to
 
 ---
 ## Submission Format
+For each submission you wish to make (under "Participate>Submit" on codalab), please upload a **single zip** file with the predictions and the system metadata. 
 
-We expect a single .tsv file for each submitted QE system output (submitted online in the respective codalab competition).
+For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empty lines which are for the teamname and the short system description, respectively.
+The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
 
-The file should be formatted with the two first lines indicating model size, and the rest containing predicted scores, one per line for each sentence, as follows:
+For the **predictions** we expect a single TSV file for each submitted QE system output (submitted online in the respective codalab competition), named 'predictions.txt'. 
+
+The file should be formatted with the two first lines indicating model size, then indication of ensemble model number,and the rest containing predicted scores, one per line for each sentence, as follows:
 
 Line 1: <DISK FOOTRPINT (in bytes, without compression)>
 
 Line 2: \<NUMBER OF PARAMETERS>
 
-Lines 3-n where -n is the number of test samples:
+Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 1 if there is no ensemble)
+
+Lines 4-n where -n is the number of test samples:
 \<LANGUAGE PAIR> \<METHOD NAME> \<SEGMENT NUMBER> \<SEGMENT SCORE> 
 
 Where:
 * **LANGUAGE PAIR** is the ID (e.g. en-de) of the language pair of the plain text translation file you are scoring. Follow the LP naming convention provided in the test set.
 * **METHOD NAME** is the name of your quality estimation method.
-* **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring.
+* **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring (starting at 0).
 * **SEGMENT SCORE** is the predicted (MQM/DA/HTER/Binary) score for the particular segment.
 
 Each field should be delimited by a single tab character.
@@ -154,20 +160,29 @@ The evaluation will focus on multilingual systems, i.e. systems that are able to
 ---
 ## Submission Format
 
+For each submission you wish to make, both in the DA and MQM competitions, please upload a **single zip** file with the predictions and the system metadata (under "Participate>Submit" on codalab). 
 
-We request a single *.tsv* file for each word-level QE system. You can submit different systems for any of the MQM or post-edited language pairs independently. The output of your system should be the predicted word-level tags, formatted in the following way:
+For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empty lines which are for the teamname and the short system description, respectively.
+The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
+
+For the **predictions** we expect a single TSV file for each submitted QE system output (submitted online in the respective codalab competition), named 'predictions.txt'.
+
+You can submit different systems for any of the MQM or post-edited language pairs independently. The output of your system should be the predicted word-level tags, formatted in the following way:
 
 Line 1: \<DISK FOOTRPINT (in bytes, without compression)>
 
 Line 2: \<NUMBER OF PARAMETERS> 
 
-Lines 3-n where -n is the number of test samples:
-\<LANGUAGE PAIR> \<METHOD NAME> \<SEGMENT NUMBER> \<WORD INDEX> \<WORD> \<BINARY SCORE>
+Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 1 if there is no ensemble)
+
+Lines 4-n where -n is the number of test samples:
+\<LANGUAGE PAIR> \<METHOD NAME> \<TYPE> \<SEGMENT NUMBER> \<WORD INDEX> \<WORD> \<BINARY SCORE>
 
 Where:
 
 * **LANGUAGE PAIR** is the ID (e.g., en-de) of the language pair.
 * **METHOD NAME** is the name of your quality estimation method.
+* **TYPE** should contain 'MT' for all segments.
 * **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring (starting at 0).
 * **WORD INDEX** is the index of the word in the tokenised sentence, as given in the training/test sets (starting at 0). This will be the word index within the MT sentence.
 * **WORD** actual word or \<EOS> token

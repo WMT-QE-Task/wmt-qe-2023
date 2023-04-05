@@ -109,7 +109,7 @@
     <div class="content container">
       <div class="page">
   <h1 class="page-title">Task 2: Explainable QE</h1>
-  <p>The main goal of the explainability for QE subtask is to explore the potential of building a quality estimation system that predicts the quality score for an input pair of source text and target MT and is able to provide word-level evidence as explanation for its predictions. In particular, for each pair of source and target sentences, participating teams are asked to provide (1) a sentence-level score estimating the translation quality and (2) a list of token-level scores where the tokens with the highest scores are expected to correspond to translation errors considered relevant by human annotators.</p>
+  <p>In this subtask, we propose to address translation error identification as rationale extraction. Instead of training a dedicated word-level model, the goal is to infer translation errors as an explanation for sentence-level quality scores. In particular, for each pair of source and target sentences, participating teams are asked to provide (1) a sentence-level score estimating the translation quality and (2) a list of continuous token-level scores where the tokens with the highest scores are expected to correspond to translation errors considered relevant by human annotators.</p>
 
 <p>For the explainable QE subtask this year, we will use the same language pairs used in <a href="/subtasks/task1/">Task 1</a>:</p>
 
@@ -124,7 +124,7 @@
   <li>Pashto-English (Ps-En)</li>
 </ul>
 
-<p>For each language pair, the participants can use the sentence-level scores to train their QE systems, available <a href="https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask">here</a>. (Please see the resources listed in the “<a href="/subtasks/resources/">Additional training resources</a>” section for more details.) The sentence level scores will be normalised to align the score directionality between the MQM and DA scores (since for DA scores higher score signifies better quality and for MQM higher scores signify more (or more serious) translation errors). The participants will be asked to provide token-level (i.e., word-level) errors, in the form of a continuous score for each token, as explanations for each predicted sentence score. As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. <strong>The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural data or synthetic data) in order to directly predict word-level errors.</strong></p>
+<p>For each language pair, the participants can use the sentence-level scores to train their QE systems, available <a href="https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask">here</a>. (Please see the resources listed in the “<a href="/subtasks/resources/">Additional training resources</a>” section for more details.) As this subtask aims to promote the research in explainability of QE systems, we encourage the participants to use or develop explanation methods which can identify contributions of tokens in the input. <strong>The participants are not allowed to supervise their models with any token-level or word-level labels or signals (whether they are from natural or synthetic data) in order to directly predict word-level errors.</strong></p>
 
 <blockquote>
   <h4 id="upcoming"><strong>Upcoming</strong></h4>
@@ -147,17 +147,15 @@
 
 <h2 id="evaluation">Evaluation</h2>
 
-<p>This task focuses on assessing the quality of explanations, not sentence-level predictions. Therefore, <strong>the main metrics for evaluation will be AUC, Average Precision, and Recall at Top-K scores for token-level explanations.</strong> Since the explanations are required to correspond to translation errors, these statistics will be computed for <strong>the subset of translations that contain errors according to human annotation</strong>.</p>
-
-<p>Besides, for sentence-level predictions, we will calculate Pearson’s correlation as a metric for analysis purposes only (not used for deciding the winner).</p>
+<p>To evaluate the submitted approaches, we will measure how well the token-level scores provided by the participants correspond with human word-level error annotation. Specific set of evaluation metrics is TBD.</p>
 
 <h2 id="baselines">Baselines</h2>
 
 <p>Following the Eval4NLP shared task, we will provide three baselines.</p>
 <ul>
   <li>Random explanations</li>
-  <li><a href="https://aclanthology.org/2020.wmt-1.122.pdf">TransQuest</a> (as a QE model) + <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf">LIME</a> (as an explaner)</li>
-  <li><a href="https://aclanthology.org/2020.acl-main.151.pdf">XMover</a> (as a QE model) + <a href="https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html">SHAP</a> (as an explaner)</li>
+  <li><a href="https://aclanthology.org/2020.wmt-1.122.pdf">TransQuest</a> (as a QE model) + <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf">LIME</a> (as an explainer)</li>
+  <li><a href="https://aclanthology.org/2020.acl-main.151.pdf">XMover</a> (as a QE model) + <a href="https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html">SHAP</a> (as an explainer)</li>
 </ul>
 
 <h2 id="recommended-resources">Recommended Resources</h2>
@@ -165,7 +163,7 @@
 <h3 id="quality-estimation-systems">Quality Estimation Systems</h3>
 <ul>
   <li><a href="https://github.com/TharinduDR/TransQuest">TransQuest (Ranasinghe et al. 2020)</a></li>
-  <li><a href="https://github.com/sheffieldnlp/deepQuest">deepQuest (Kepler et al. 2019)</a></li>
+  <li><a href="https://github.com/sheffieldnlp/deepQuest-py">deepQuest-py (Alva-Manchego et al., 2021)</a></li>
   <li><a href="https://github.com/Unbabel/OpenKiwi">OpenKiwi</a></li>
 </ul>
 

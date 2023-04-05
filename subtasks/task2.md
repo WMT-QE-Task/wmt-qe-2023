@@ -35,15 +35,17 @@ For each language pair, a submission is a zip file consisting of three files.
 
 ## Evaluation
 
-To evaluate the submitted approaches, we will measure how well the token-level scores provided by the participants correspond with human word-level error annotation. Specific set of evaluation metrics is TBD. 
+The aim of evaluation is to assess the quality of explanations, not sentence-level predictions. So, to evaluate the submitted approaches, we will measure how well the token-level scores provided by the participants correspond with human word-level error annotation. The primary metric here is **Recall at Top K**. In addition, **AUC** and **Average Precision** will be used as secondary metrics. Although the metrics for sentence-level predictions (e.g., Pearson's correlation) may be shown on the leaderboard, we will not use them for ranking the participants or determining the winner in this explainability task. 
+
+The official evaluation script for this task can be found [here](https://github.com/WMT-QE-Task/qe-eval-scripts/blob/main/wmt22/task2_evaluate.py).
 
 ## Baselines
 
-Following the Eval4NLP shared task, we will provide three baselines.
+Following the Eval4NLP shared task, we will use the methods below as baselines.
 - Random explanations
-- [TransQuest](https://aclanthology.org/2020.wmt-1.122.pdf) (as a QE model) + [LIME](https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf) (as an explainer)
+- [TransQuest](https://aclanthology.org/2020.wmt-1.122.pdf) (as a QE model) + [LIME](https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf) (as an explainer) --> Main baseline
 - [XMover](https://aclanthology.org/2020.acl-main.151.pdf) (as a QE model) + [SHAP](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html) (as an explainer)
-
+- NEW: [OpenKiwi](https://aclanthology.org/P19-3020.pdf) (as a QE model) + [LIME](https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf) (as an explainer)
 
 ## Recommended Resources
 
