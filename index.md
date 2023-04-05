@@ -36,6 +36,8 @@ This year we will release test-sets on the following language-pairs:
 * English-Tamil (En-Ta)       [DA + post-edits]
 * English-Telegu (En-Te)  [DA]
 * English-Gujarati (En-Gu)   [DA]
+
+
 <!-- | English-Farsi (En-Fa) 
 
 
@@ -117,9 +119,11 @@ TBA
 - José Souza (Unbabel)
 - Diptesh Kanojia (Surrey Institute for People-Centred AI, University of Surrey)
 - Constantin Orasan (University of Surrey)
+
 <!-- - Lucia Specia (Imperial College London)
 - Piyawat Lertvittayakumjorn (Imperial College London)
 - Steffen Eger (Technische Universität Darmstadt) -->
+
 <!-- - Marina Fomicheva (University of Sheffield) -->
 
 ## Sponsors
@@ -149,12 +153,9 @@ TBA
 	     <img src="/public/css/Surrey.png" height=70px width=auto>
 	   </div>
 	   <div class="column">
-	     <img src="/public/css/tilburg.jpeg" height=70px width=auto>
+	     <img src="/public/css/tilburg3.png" height=70px width=auto>
 	   </div>
 	   <div class="column">
 	     <img src="/public/css/INESC-ID.png" height=70px width=auto>
-	   </div>
-	   <div class="column">
-	     <img src="/public/css/surrey.jpeg" height=70px width=auto>
 	   </div>
 	</div>
