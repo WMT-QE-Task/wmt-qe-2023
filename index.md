@@ -8,7 +8,7 @@ layout: home
 # Welcome to the 2023 Quality Estimation Shared Task!
 
 
-``❗`` To easily stay up-to-date you can also follow out [Twitter](https://twitter.com/qe_task) and [LinkedIn]() accounts.
+``❗`` To easily stay up-to-date you can also follow our [Twitter](https://twitter.com/qe_task) account.
 
 ``❗`` Please also register to the **QE google-group** [here](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive updates and announcements immediately, and **ask questions**.
 
