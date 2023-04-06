@@ -10,7 +10,7 @@ We provide below links to additional resources that can be used for training/aug
 
 # Task 1: Quality Prediction
 
- ## DA and post-edited annotation data
+## DA and post-edited annotation data
 
  For the subtasks using **DA annotations** for sentence level and **post-edited  annotations** for word-level, participants can use the annotations provided for the *Quality Estimation Shared Tasks* of the previous year(s) available on the MLQE-PE [github page](https://github.com/sheffieldnlp/mlqe-pe) or the [previous tasks section](previous.md). For a full description of the available language pairs and annotations please read the [MLQE-PE paper](https://arxiv.org/abs/2010.04480) and the [WMT QE 2022 findings paper](https://aclanthology.org/2022.wmt-1.3/).
 
