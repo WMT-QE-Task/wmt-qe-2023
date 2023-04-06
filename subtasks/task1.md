@@ -27,6 +27,7 @@ Below we present the language pairs for the 2023 shared task along with availabl
 | English-Tamil (En-Ta)  | DA                   | Post-edits  | TBA | TBA               | TBA               |
 | English-Telegu (En-Te)  | DA                   | -  | TBA | TBA               | TBA               |
 | English-Gujarati (En-Gu)  | DA                   | - | TBA | TBA               | TBA               |
+
 <!-- | English-Farsi (En-Fa)  | -                   |  Post-edits  | - | TBA               | TBA               | -->
 
 
