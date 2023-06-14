@@ -1,5 +1,6 @@
 ---
 layout: page
+<<<<<<< HEAD
 title: 'Task 2: Fine-grained Quality prediction'
 ---
 
@@ -33,3 +34,9 @@ Below we present the language pairs for the 2023 shared task along with availabl
 | English-Hindi (En-Hi)  | DA + MQM               | Post-edits  | TBA | TBA               | TBA               |
 | English-Tamil (En-Ta)  | DA                   | Post-edits  | TBA | TBA               | TBA               |
 | English-Farsi (En-Fa)  | DA                   |  Post-edits  | - | -               | TBA               | 
+=======
+title: 'Task 2: Zero-Shot QE'
+---
+
+TBA
+>>>>>>> 4162b9531cd8909aa79484ebd313ff9b8863d3a4

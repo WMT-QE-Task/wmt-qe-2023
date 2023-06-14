@@ -52,23 +52,29 @@ We will use the following baselines:
 - Sentence level subtask: **COMET QE** 
     - wmt21-comet-qe-mqm [🔗](https://unbabel-experimental-models.s3.amazonaws.com/comet/wmt21/wmt21-comet-qe-mqm.tar.gz)
     - wmt21-comet-qe-da [🔗](https://unbabel-experimental-models.s3.amazonaws.com/comet/wmt21/wmt21-comet-qe-da.tar.gz)
-- Word level subtask: **COMETKiwi** [🔗]()
+- Word level subtask: **COMETKiwi** [🔗](https://github.com/Unbabel/COMET/tree/master/comet/models/multitask) 
 
 
 ---
-# Evaluation
+# Evaluation 
 
+## Sentence-level
+  
  We will use **Spearman** as primary metric and also compute Kendall and Pearson as secondary metrics.
 
-### Critical error detection
-As a complementary evaluation, we will also evaluate systems with respect to the detection of critical errors. We specifically want to asses the ability of submitted models to score translations with critical errors lower than the other translations. To evaluate this we will compute for the translations flagged as critical errors:
-- AUROC 
-- Recall@n
+<!---
+ ### Critical error detection
+As a complementary evaluation, we will also evaluate systems with respect to the detection of critical errors. We specifically want to assess the ability of submitted models to score translations with critical errors such as hallucinations *lower* than the other translations. To evaluate this we will compute the *AUROC* and *recall@n* for each submission, with respect to the translations flagged as critical errors.
+--->
+
+## Word-level
+We will use **MCC** (Matthews correlation coefficient) as a primary metric. 
+
 
 ---
 # Submission Format
 The competition will take place on CODALAB with one competition instance for sentence-level and one for word-level subtasks. 
-
+ 
 > ``❗`` This year we will also require participants to fill in a **form** describing their model and data choices for each submission. 
 
 For each submission you wish to make (under "Participate>Submit" on codalab), please upload a **single zip** file with the predictions and the system metadata. 
@@ -77,8 +83,8 @@ For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empt
 The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
 
 For the **predictions** we describe the exact format expected separately for each subtask:
-
-### Sentence level:
+ 
+## Sentence level:
 
 For the **predictions** we expect a single TSV file for each submitted QE system output (submitted online in the respective codalab competition), named 'predictions.txt'. 
 
@@ -99,9 +105,10 @@ Where:
 * **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring (starting at 0).
 * **SEGMENT SCORE** is the predicted numerical (MQM/DA) score for the particular segment.
 
-Each field should be delimited by a single tab character.
+Each field should be delimited by a single tab (<\t>) character.
 
-### Word-level
+
+## Word-level  
 
 For the **predictions** we expect a single TSV file for each submitted QE system output (submitted online in the respective codalab competition), named 'predictions.txt'.
 
@@ -126,4 +133,4 @@ Where:
 * **WORD** actual word or \<EOS> token
 * **BINARY SCORE** is either 'OK' for no issue or 'BAD' for any issue.
 
-Each field should be delimited by a single tab character.
+Each field should be delimited by a single tab (<\t>) character. 

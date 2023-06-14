@@ -15,14 +15,14 @@ layout: home
 
 This shared task focuses on automatic methods for estimating the quality of neural machine translation output at run-time, without relying on reference translations. It will cover estimation at sentence and word levels and critical error detection. This year we put emphasis on:
 
-* Medium- and **low-resource** language pairs 
-* Increased alignment with the [Metrics shared task](https://wmt-metrics-task.github.io/)
+* Medium- and **low-resource** language pairs  
+* New fine-grained quality estimation shared task 
+* Increased alignment with the [Metrics shared task](https://wmt-metrics-task.github.io/) to facilitate cross-submissions and multi-task approaches
 	* Shared translation sources
 	* Shared annotation schema [MQM]
 	* Shared submission platform [CODALAB]
-Increased alignment with the [APE shared task](http://www2.statmt.org/wmt23/ape-task.html)
-	* Shared sources - translations- post-edits
-	* Shared data format to facilitate cross-submission and multi-task approaches
+* Increased alignment with the [APE shared task](http://www2.statmt.org/wmt23/ape-task.html) to facilitate cross-submission and multi-task approaches
+	* Shared sources - translations - post-edits  (English-Marathi) 
 * Incorporated critical error detection tasks
 * Incorporated zero-shot tasks
 
@@ -30,7 +30,7 @@ Increased alignment with the [APE shared task](http://www2.statmt.org/wmt23/ape-
 
 This year we will release test-sets on the following language-pairs:
 * English-German (En-De)   [MQM]
-* Chinese-English (Zh-En)  [MQM]
+* Chinese-English (Zh-En)  [MQM] 
 * Hebrew-English   (He-Ee)  [MQM]
 * English-Marathi (En-Mr)    [DA + post-edits]
 * English-Hindi (En-Hi)        [DA + post-edits]
@@ -49,10 +49,10 @@ See more details in [Task 1](./subtasks/task1.md) and [Task 2](./subtasks/task2.
 
 |  | Date |
 | ----------- | :-----------: |
-| Release of training data | 15th June, 2023 |
-| Release of dev data | TBA |
+| Release of training data | 16th June, 2023 |
+| Release of dev data | 26th June 2023 | 
 | Release of test data | 21st July, 2023 |
-| Submission of test predictions deadline | 4th August, 2023 | 
+| Submission of test predictions deadline | 4th August, 2023 |  
 | Announcement of results | (TBA) September, 2023|
 | System description submission deadline | (TBA) August 2023 |
 | Paper submission deadline to WMT | (TBA) September, 2023 |
@@ -64,11 +64,10 @@ See more details in [Task 1](./subtasks/task1.md) and [Task 2](./subtasks/task2.
 
 In addition to generally advancing the state of the art in quality estimation, our specific **goals** are:
 
-- to extend the available public benchmark datasets;
-- to investigate the potential and suitability of MQM annotations for quality estimation;
-- to investigate new multilingual and language independent approaches esp. for zero-shot prediction;
-- to study the feasibility of explainable quality estimation; and
-- to focus on detection of extreme/catastrophic errors in MT.
+- to extend the available public benchmark datasets with medium- and low-resource languages;
+- to investigate the potential of **fine-graned quality estimation**;
+- to investigate new multilingual and language independent approaches esp. for **zero-shot** approaches; and
+- to study the robustness of QE approaches
 
 For all tasks, the datasets and NMT models that generated the translations will be made publicly available.
 
@@ -76,52 +75,35 @@ Participants are also allowed to explore any additional data and resources deeme
 
 ### Subtasks:
 
-1. [Sentence-level quality estimation](./subtasks/task1/)
-2. [Word-level quality estimation](./subtasks/task2/)
+1. [Quality prediction](./subtasks/task1/)
+2. [Fine-grained quality prediction](./subtasks/task2/) 
+
 
 ## Submission Information
 The shared task competition will take place on CODALAB. 
 
 Please register with one account per team.
 
-<!-- Task 1:
-- Sentence level DA: [https://codalab.lisn.upsaclay.fr/competitions/6841](https://codalab.lisn.upsaclay.fr/competitions/6841)
-- Sentence level MQM: [https://codalab.lisn.upsaclay.fr/competitions/6866](https://codalab.lisn.upsaclay.fr/competitions/6866)
-- Word level: [https://codalab.lisn.upsaclay.fr/competitions/6883](https://codalab.lisn.upsaclay.fr/competitions/6883)
-
-
-Task 2:
-- Explainability task: [https://codalab.lisn.upsaclay.fr/competitions/6863](https://codalab.lisn.upsaclay.fr/competitions/6863)
-
-
-Task 3:
-- Critical error detection: [https://codalab.lisn.upsaclay.fr/competitions/6893](https://codalab.lisn.upsaclay.fr/competitions/6893)
-
-It is not necessary to participate on all tasks/subtasks/phases. Participating teams can choose which tasks/language pairs they want to make submissions for. -->
-## Useful Software
+# Useful Software
 Here are some open source software for QE that might be useful for participants:
 - [OpenKiwi](https://github.com/Unbabel/OpenKiwi)
-- [COMET-QE](https://unbabel.github.io/COMET/html/models.html)
+- [COMET-QE](https://unbabel.github.io/COMET/html/models.html) 
 - [TransQuest](https://github.com/TharinduDR/TransQuest)
-- [DeepQuest](https://github.com/sheffieldnlp/deepQuest)
+- [DeepQuest](https://github.com/sheffieldnlp/deepQuest)   
 
-## Submission Requirements
-TBA
-
-## Organization:
+ 
+# Organization
 
 - Chrysoula Zerva (Instituto de Telecomunicações) [chryssa.zrv@gmail.com](chryssa.zrv@gmail.com)
 - André Martins (Instituto de Telecomunicações, Unbabel)
 - Frédéric Blain (Tilburg University)
 - Ricardo Rei (INESC-ID, Unbabel)
-- José Souza (Unbabel)
+- José Souza (Unbabel) 
 - Diptesh Kanojia (Surrey Institute for People-Centred AI, University of Surrey)
 - Constantin Orasan (University of Surrey)
-- Nuno Guerreiro (Instituto de Telecomunicações)
-<!-- - Lucia Specia (Imperial College London)
-- Piyawat Lertvittayakumjorn (Imperial College London)
-- Steffen Eger (Technische Universität Darmstadt) -->
-<!-- - Marina Fomicheva (University of Sheffield) -->
+- Nuno Guerreiro (Instituto de Telecomunicações) 
+- Fatemeh Azadi (University Of Tehran) 
+
 
 ## Sponsors
 
