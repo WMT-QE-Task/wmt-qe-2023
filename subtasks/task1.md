@@ -1,95 +1,84 @@
 ---
 layout: page
-title: 'Task 1: Quality prediction'
+title: 'Task 1: Quality estimation'
 ---
 
-The quality prediction task follows the trend of the previous years in comprising a **sentence-level subtask** where the goal is to predict the quality score for each source-target sentence pair and a **word-level subtask** where the goal is to predict the translation errors, assigning OK/BAD tags to each word of the target. 
+The quality prediction task follows the trend of the previous years in comprising a **sentence-level subtask** where the goal is to predict the quality score for each source-target sentence pair and a **word-level subtask** where the goal is to predict the translation errors, assigning OK/BAD tags to each word (token) of the target translation. 
 
-Both subtasks include annotations derived in two different ways, depending on the language pair: direct assessments (DA), following the trend of the previous years, and multi-dimensional quality metrics (MQM), introduced for the first time in the QE shared task. Detailed information for the language pairs, the annotation specifics, and the available training and development resources in each category are provided below. We also note that the sentence- and word-level subtasks use the same source-target sentences for each language pair.
+Both subtasks include annotations derived in two different ways, depending on the language pair:  **direct assessments (DA)**, following the trend of older editions, and **multi-dimensional quality metrics (MQM)**, aligned with the [Metrics shared task](https://wmt-metrics-task.github.io/). Detailed information for the language pairs, the annotation specifics, and the available training and development resources in each category are provided below. We also note that the sentence- and word-level subtasks use the same source-target sentences for each language pair.
 
 
 > #### **Important**
-> Participants will be able to submit predictions for **any** of the subtasks/language pairs of their choice (or all of them). There will also be a **multilingual** phase of the competition covering all languages, to encourage development of multilingual systems.
+> Participants will be able to submit predictions for **any** of the subtasks/language pairs of their choice (or all of them). 
 
-# Summary of data for 2022 shared task
+# New elements
 
-> ``❗`` The **training data** for all subtasks can now be downloaded [here 🔗](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask). We provide an overview of the datasets, annotations and LPs below. For more information check also the individual task tabs and the additional data.
+## Critical error detection subtask
 
+This year we will evaluate submitted models not only on correlations with human scores, but also with respect to the ability to properly **distinguish translations with critical errors** (e.g. hallucinations) and attribute low quality scores to them. To that end the provided test sets will include a set of source-target segments with critical errors for which **no additional training data** will be provided. We thus aim to investigate whether submitted models are robust to cases such as significant deviations in meaning, hallucinations, etc. 
 
-| Language Pair | Sentence-level score type| Word-level annotation | Train set and size  | Dev set and size  | Test set and size  |
+> #### **Note**
+> The evaluation for critical errors will be separate to the main evaluation of performance for quality prediction. 
+
+## Zero-shot LPs
+We introduce two new zero-shot test sets, aiming to further motivate zero-/few-shot approaches.
+- **He-En:**  MQM annotations 
+- **En-Fa:**  post-edit annotations 
+ 
+
+# Summary of data for 2023 shared task
+
+Below we present the language pairs for the 2023 shared task along with available training resources
+
+> ``❗`` Check back soon for updated information.
+
+| Language Pair | Sentence-level annotation| Word-level annotation | Train data  | Dev data | Test data  |
 |--------------------------|----------------------|-----------------------|---------------------------|-------------------|--------------------|
-| English-Russian (En-Ru)  | MQM                  | MQM Binary: OK/BAD             | Metrics 2021: <br /> Newstest ➝ 7K,  <br />  Tedtalks ➝ 8K      | 1K               | TBA - 1K                 |
-| English-German (En-De)   | MQM                  |  MQM Binary: OK/BAD           | Metrics 2020: 11K <br /> Metrics 2021: Newstest ➝ 7K, <br /> Tedtaks ➝ 8K | 1K               | TBA - 1K                 |
-| Chinese-English (Zh-En)  | MQM                  |  MQM Binary: OK/BAD         | Metrics 2020: 15K <br /> Metrics 2021: <br /> Newstest ➝ 8K <br /> Tedtalks ➝ 8K | 1K               | TBA - 1K                 |
-| English-Marathi (En-Mr)  | DA                   | Post-editing Binary: OK/BAD  | **NEW**❗ 26K                    | **NEW**❗ 1K            | TBA - 1K               |
-| English-Czech (En-Cs)    | DA                   | Post-editing Binary: OK/BAD  | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
-| English-Japanese (En-Ja) | DA                   | Post-editing Binary: OK/BAD   | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
-| Khmer-English (Km-En)    | DA                   | Post-editing Binary: OK/BAD   | No training set           | MLQE-PE Test 21 1K | TBA - 1K |
-| Pashto-English (Ps-En)   | DA                   | Post-editing Binary: OK/BAD   | No training set           | MLQE-PE Test 21 1K | TBA - 1K  |
-| English-German (En-De)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
-| English-Chinese (En-Zh)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
-| Esthonian-English (Et-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
-| Nepali-English (Ne-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
-| Romanian-English (Ro-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
-| Russian-English (Ru-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
-| Sinhala-English (Si-En)   | DA                   | Post-editing Binary: OK/BAD   | 9K (MLQE-PE Train/Dev/Test20)          | MLQE-PE Test 21 1K |  -- |
-| Surprise LP  | DA                   | Binary: OK/BAD           | – (zero-shot)             | – (zero-shot)     | TBA - 1K       |
-
-# Sentence-level Subtask
-
-> ``❗`` The **training data** for the sentence level task can be downloaded [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask).
-## MQM scores
-
-
-We will provide test sets for three language pairs annotated with MQM annotations. 
-
- - English-Russian (En-Ru)
- - English-German (En-De)
- - Chinese-English (Zh-En)
-
-For training resources with MQM annotations it is possible to use any of the resources listed in the "[Additional training resources](../subtasks/resources.md)" section or directly download the data from the [github page](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/sentence-level-subtask/MQM_QE_data/train_data_2022). 
-
-We will also release a development set for each language pair. For release dates please consult the [home](../index.md) page
-
-Note that in order to align with the DA annotations the MQM scores will be inverted (such that higher score will indicate better quality) and standardized per annotator. The individual annotations from each annotator will also be made available per segment.
-
-For annotation guidelines see: **TBA**
-
-## DA scores
-
-We will provide test sets for five language pairs annotated with DA scores. 
-
- - English-Marathi (En-Mr)
- - English-Czech (En-Cs)
- - English-Japanese (En-Ja)
- - Khmer-English (Km-En)
- - Pashto-English (Ps-En)
-
-For each language pair a single MT model has been used to translate the source sentences. Specifically, the English-Marathi has been translated with the English-Indic model available [here](https://drive.google.com/file/d/1itxbV2RqIsduOJ7_7AdUaxTdIddMBmJ2/view?usp=sharing), while the En-Cs, En-Ja, Km-En and Ps-En were translated using a [multilingual Transformer NMT model](https://arxiv.org/abs/2008.00401).
-
-
-Apart from the provided training data, for training resources with DA annotations it is possible to use any of the resources listed in the "[Additional training resources](../subtasks/resources.md)" section. 
-
- Additionally this year we make available a *new* training dataset for English-Marathi, comprising 26K language pairs for training.
-
- We will also release a development set for each language pair. For release dates please consult the [home](../index.md) page
-
----
-
-## Evaluation
-
-Sentence-level submissions will be evaluated using the Spearman's rank correlation coefficient to estimate correlation with the human scores (z-normalized scores). Pearson's correlation coefficient as well as MAE and RMSE will also be used as secondary metrics.
-
-The evaluation will focus on multilingual systems, i.e. systems that are able to provide predictions for all languages, including the zero-shot ones. Therefore, average Spearman correlation across all these languages will be used to rank QE systems. We will also evaluate QE systems on a per-language basis for those interested in particular languages, and a per annotation schema scenario (comparing performance on MQM and DA separately).
-
+| English-German (En-De)   | MQM                  |  MQM            | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data) | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/test_data-gold_labels/task1_mqm/en-de)            | TBA: July 21st               |
+| Chinese-English (Zh-En)  | MQM                  |  MQM            | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data) | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/test_data-gold_labels/task1_mqm/zh-en)               | TBA: July 21st               |
+| Hebrew-English           | MQM                  |  MQM            | - | -               | TBA: July 21st                |
+| English-Marathi (En-Mr)  | DA                   | Post-edits  | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data) | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/test_data-gold_labels/task1_da/en-mr)               | TBA: July 21st                |
+| English-Hindi (En-Hi)  | DA                | Post-edits  | TBA: June 15th | TBA: June 26th                | TBA: July 21st                |
+| English-Tamil (En-Ta)  | DA                   | Post-edits  | TBA: June 15th | TBA: June 26th                | TBA: July 21st                |
+| English-Telegu (En-Te)  | DA                   | -  | TBA: June 15th | TBA: June 26th               | TBA: July 21st                |
+| English-Gujarati (En-Gu)  | DA                   | - | TBA: June 15th | TBA: June 26th               | TBA: July 21st                |
+| English-Farsi (En-Fa)  | -                   |  Post-edits  | - | -               | TBA: July 21st                | 
 
 
 ---
-## Submission Format
+## Baselines
+
+We will use the following baselines:
+- Sentence level subtask: **COMET QE** 
+    - wmt21-comet-qe-mqm [🔗](https://unbabel-experimental-models.s3.amazonaws.com/comet/wmt21/wmt21-comet-qe-mqm.tar.gz)
+    - wmt21-comet-qe-da [🔗](https://unbabel-experimental-models.s3.amazonaws.com/comet/wmt21/wmt21-comet-qe-da.tar.gz)
+- Word level subtask: **COMETKiwi** [🔗]()
+
+
+---
+# Evaluation
+
+ We will use **Spearman** as primary metric and also compute Kendall and Pearson as secondary metrics.
+
+### Critical error detection
+As a complementary evaluation, we will also evaluate systems with respect to the detection of critical errors. We specifically want to asses the ability of submitted models to score translations with critical errors lower than the other translations. To evaluate this we will compute for the translations flagged as critical errors:
+- AUROC 
+- Recall@n
+
+---
+# Submission Format
+The competition will take place on CODALAB with one competition instance for sentence-level and one for word-level subtasks. 
+
+> ``❗`` This year we will also require participants to fill in a **form** describing their model and data choices for each submission. 
+
 For each submission you wish to make (under "Participate>Submit" on codalab), please upload a **single zip** file with the predictions and the system metadata. 
 
 For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empty lines which are for the teamname and the short system description, respectively.
 The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
+
+For the **predictions** we describe the exact format expected separately for each subtask:
+
+### Sentence level:
 
 For the **predictions** we expect a single TSV file for each submitted QE system output (submitted online in the respective codalab competition), named 'predictions.txt'. 
 
@@ -108,62 +97,11 @@ Where:
 * **LANGUAGE PAIR** is the ID (e.g. en-de) of the language pair of the plain text translation file you are scoring. Follow the LP naming convention provided in the test set.
 * **METHOD NAME** is the name of your quality estimation method.
 * **SEGMENT NUMBER** is the line number of the plain text translation file you are scoring (starting at 0).
-* **SEGMENT SCORE** is the predicted (MQM/DA/HTER/Binary) score for the particular segment.
+* **SEGMENT SCORE** is the predicted numerical (MQM/DA) score for the particular segment.
 
 Each field should be delimited by a single tab character.
 
-# Word-level Subtask
-
-
-> ``❗`` The **training data** for the sentence level task can be downloaded [here](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/word-level-subtask).
-
-The word-level subtask evaluates the application of QE for post-editing purposes. It consists of predicting word-level tags for the target side (to detect mistranslated or missing words). Each token is tagged as either OK or BAD. 
-
-The OK/BAD tags are provided for each of the language pairs of the sentence level task, and are derived from either MQM annotations (En-De, Zh-En and En-Ru) or post-edited sentences. 
-
-
----
-##  Tagging conventions 
-The OK/BAD tags on the target sentence are annotated as follows: 
-* If a target token is (part of) a mistranslation of the corresponding source token(s) it obtains the tag BAD. 
-* If a token is completely irrelevant to the source (wrong insertion) it also obtains the tag BAD. 
-* If there is one or more missing token(s) between two tokens in the target (translation) then the token on the right of the ommision (where the missing token(s) should have been inserted) should be annotated as BAD (regardless of whether that token is correct or not). 
-* All other correctly translated tokens should be tagged as OK.
-
-> ``📝`` Apart from the sentence tokens, an additional  \<EOS> token is appended to the end of each target sentence to represent potentially missing tokens that should have been inserted at the end of the sentence.
-
-
----
-## Tagging specifications by annotation type
-
-As we have language pairs with different annotation schemes this year, the training data is derived differently and follows different conventions for MQM and post-edited sentences.
-### **MQM:**
-For the En-De and Zh-En language pairs we did not have any token-level information for deletions (missing tokens on the target side), hence all \<EOS> tokens are tagged as OK and there are no BAD tags related to deletion errors. 
-
-The En-Ru data included annotations for missing tokens on the target side, hence it includes such token-level information.
-
-> ``📝`` **NOTE:** The dev and test data for the MQM word-level tasks will follow the En-Ru setup.
-
-
-### **Post-Edits:**
-For the post edited data the word-level tags for the target side include mistranslation/insertion and deletion errors as descibed in the beginning. The code used to process the data and obtain the files can be found on [this github repository](https://github.com/deep-spin/qe-corpus-builder).
-
-
----
-
-## Evaluation
-
-For word-level QE, the submissions will be evaluated in terms of MCC (Matthews correlation coefficient) as a primary metric. F1 scores will also be calculated and used as secondary evaluation metrics. 
-
-The evaluation will focus on multilingual systems, i.e. systems that are able to provide predictions for all languages, including the zero-shot ones. We will also evaluate QE systems on a per-language basis for those interested in particular languages, and a per annotation schema scenario (comparing performance on MQM and post-edits separately).
-
----
-## Submission Format
-
-For each submission you wish to make, both in the DA and MQM competitions, please upload a **single zip** file with the predictions and the system metadata (under "Participate>Submit" on codalab). 
-
-For the **metadata**, we expect a 'metadata.txt' file, with exactly two non-empty lines which are for the teamname and the short system description, respectively.
-The first line of metadata.txt must contain your team name. You can use your CodaLab username as your teamname. The second line of metadata.txt must contain a short description (2-3 sentences) of the system you used to generate the results. This description will not be shown to other participants. Note that submissions without a description will be invalid. It is fine to use the same submission for multiple submissions/phases if you use the same model (e.g. a multilingual or multitasking model)
+### Word-level
 
 For the **predictions** we expect a single TSV file for each submitted QE system output (submitted online in the respective codalab competition), named 'predictions.txt'.
 
