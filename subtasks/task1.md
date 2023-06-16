@@ -62,10 +62,9 @@ We will use the following baselines:
   
  We will use **Spearman** as primary metric and also compute Kendall and Pearson as secondary metrics.
 
-<!---
+
  ### Critical error detection
-As a complementary evaluation, we will also evaluate systems with respect to the detection of critical errors. We specifically want to assess the ability of submitted models to score translations with critical errors such as hallucinations *lower* than the other translations. To evaluate this we will compute the *AUROC* and *recall@n* for each submission, with respect to the translations flagged as critical errors.
---->
+As a complementary evaluation, we will evaluate systems with respect to the detection of critical errors. We specifically want to assess the ability of submitted models to score translations with critical errors, such as hallucinations, *lower* than the other translations. To evaluate this, we will compute the *AUROC* and *recall@n* for each submission, with respect to the translations flagged as critical errors.
 
 ## Word-level
 We will use **MCC** (Matthews correlation coefficient) as a primary metric. 
