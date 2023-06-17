@@ -8,9 +8,9 @@ layout: home
 # Welcome to the 2023 Quality Estimation Shared Task!
 
 
-``❗`` To easily stay up-to-date you can also follow our [Twitter](https://twitter.com/qe_task) account.
+``❗`` To easily stay up-to-date you can also follow our [**Twitter account**](https://twitter.com/qe_task).
 
-``❗`` Please also register to the **QE google-group** [here](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive updates and announcements immediately, and **ask questions**.
+``❗`` Please also register to the [**QE google-group**](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive updates and announcements immediately, and **ask questions**.
 
 
 This shared task focuses on automatic methods for estimating the quality of neural machine translation output at run-time, without relying on reference translations. It will cover estimation at sentence and word levels and critical error detection. This year we put emphasis on:
@@ -75,12 +75,12 @@ Participants are also allowed to explore any additional data and resources deeme
 
 ### Subtasks:
 
-1. [Quality prediction](./subtasks/task1/)
-2. [Fine-grained quality prediction](./subtasks/task2/) 
+1. [Quality estimation](./subtasks/task1/)
+2. [Fine-grained error span detection](./subtasks/task2/) 
 
 
 ## Submission Information
-The shared task competition will take place on CODALAB. 
+The shared task competition will take place on CODALAB (link in July).
 
 Please register with one account per team.
 
@@ -135,7 +135,7 @@ Here are some open source software for QE that might be useful for participants:
 	     <img src="/public/css/Surrey.png" height=70px width=auto>
 	   </div>
 	   <div class="column">
-	     <img src="/public/css/tilburg.jpeg" height=70px width=auto>
+	     <img src="/public/css/tilburg3.png" height=70px width=auto>
 	   </div>
 	   <div class="column">
 	     <img src="/public/css/INESC-ID.png" height=70px width=auto>
