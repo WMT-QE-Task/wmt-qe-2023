@@ -38,11 +38,15 @@ Below we present the language pairs for the 2023 shared task along with availabl
 | Chinese-English (Zh-En)  | MQM                  |  MQM            | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data) | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/test_data-gold_labels/task1_mqm/zh-en)               | TBA: July 21st               |
 | Hebrew-English           | MQM                  |  MQM            | - | -               | TBA: July 21st                |
 | English-Marathi (En-Mr)  | DA                   | Post-edits  | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data) | [previously released](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/test_data-gold_labels/task1_da/en-mr)               | TBA: July 21st                |
-| English-Hindi (En-Hi)  | DA                | Post-edits  | TBA: June ~~15th~~ 26th | TBA: June 26th                | TBA: July 21st                |
-| English-Tamil (En-Ta)  | DA                   | Post-edits  | TBA: June ~~15th~~ 26th  | TBA: June 26th                | TBA: July 21st                |
+| English-Hindi (En-Hi)  | DA                | Post-edits*  | TBA: June ~~15th~~ 26th | TBA: June 26th                | TBA: July 21st                |
+| English-Tamil (En-Ta)  | DA                   | Post-edits*  | TBA: June ~~15th~~ 26th  | TBA: June 26th                | TBA: July 21st                |
 | English-Telegu (En-Te)  | DA                   | -  | [new train set released](https://github.com/WMT-QE-Task/wmt-qe-2023-data/tree/main/task_1/en-te) | TBA: June 26th               | TBA: July 21st                |
 | English-Gujarati (En-Gu)  | DA                   | - | [new train set released](https://github.com/WMT-QE-Task/wmt-qe-2023-data/tree/main/task_1/en-gu) | TBA: June 26th               | TBA: July 21st                |
 | English-Farsi (En-Fa)  | -                   |  Post-edits  | - | -               | TBA: July 21st                | 
+
+
+
+ &nbsp;&nbsp; (*) post-edits (word level quality estimation) available as test-set only
 
 
 ---
