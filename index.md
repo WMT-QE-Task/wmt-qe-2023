@@ -49,7 +49,7 @@ See more details in [Task 1](./subtasks/task1.md) and [Task 2](./subtasks/task2.
 
 |  | Date |
 | ----------- | :-----------: |
-| Release of training data | 3rd July, 2023 |
+| Release of extra training data | 3rd July, 2023 |
 | Release of dev data | 3rd July 2023 | 
 | Release of test data | 1st August, 2023 |
 | Submission of test predictions deadline | 15th August, 2023 |  
