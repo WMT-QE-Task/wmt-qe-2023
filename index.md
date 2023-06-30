@@ -49,10 +49,10 @@ See more details in [Task 1](./subtasks/task1.md) and [Task 2](./subtasks/task2.
 
 |  | Date |
 | ----------- | :-----------: |
-| Release of training data | 16th June, 2023 |
-| Release of dev data | 26th June 2023 | 
-| Release of test data | 21st July, 2023 |
-| Submission of test predictions deadline | 4th August, 2023 |  
+| Release of training data | 3rd July, 2023 |
+| Release of dev data | 3rd July 2023 | 
+| Release of test data | 1st August, 2023 |
+| Submission of test predictions deadline | 15th August, 2023 |  
 | Announcement of results | (TBA) September, 2023|
 | System description submission deadline | (TBA) August 2023 |
 | Paper submission deadline to WMT | (TBA) September, 2023 |
