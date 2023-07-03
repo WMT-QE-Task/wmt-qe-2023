@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 'Task 2: Fine-grained Quality prediction'
+title: 'Task 2: Fine-grained error span detection'
 ---
 
  This is a **word-level subtask** where the goal is to predict the translation error spans as opposed to binary OK/BAD tasks. 
