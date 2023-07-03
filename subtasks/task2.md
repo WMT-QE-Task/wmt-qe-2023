@@ -18,9 +18,9 @@ Below we present the language pairs for the 2023 shared task along with availabl
 
 | Language Pair | Sentence-level annotation| Word-level annotation | Train data  | Dev data | Test data  |
 |--------------------------|----------------------|-----------------------|---------------------------|-------------------|--------------------|
-| English-German (En-De)   | MQM                  |  MQM            | [MQM 2020 2022](https://github.com/google/wmt-mqm-human-evaluation)  | [MQM 2020 2022](https://github.com/google/wmt-mqm-human-evaluation)            | TBA: July 21st                  |
-| Chinese-English (Zh-En)  | MQM                  |  MQM            | [MQM 2020 2022](https://github.com/google/wmt-mqm-human-evaluation) | [MQM 2020 2022](https://github.com/google/wmt-mqm-human-evaluation)             | TBA: July 21st                  |
-| Hebrew-English           | MQM                  |  MQM            | - | -               | TBA: July 21st                  |
+| English-German (En-De)   | MQM                  |  MQM            | [MQM 2020 2022](https://github.com/google/wmt-mqm-human-evaluation)  | [MQM 2020 2022](https://github.com/google/wmt-mqm-human-evaluation)            | TBA: Aug 1st                  |
+| Chinese-English (Zh-En)  | MQM                  |  MQM            | [MQM 2020 2022](https://github.com/google/wmt-mqm-human-evaluation) | [MQM 2020 2022](https://github.com/google/wmt-mqm-human-evaluation)             | TBA: Aug 1st                  |
+| Hebrew-English           | MQM                  |  MQM            | - | -               | TBA: Aug 1st                  |
 
 
 # Evaluation
