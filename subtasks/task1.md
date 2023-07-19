@@ -18,7 +18,7 @@ Both subtasks include annotations derived in two different ways, depending on th
 This year we will evaluate submitted models not only on correlations with human scores, but also with respect to the ability to properly **distinguish translations with critical errors** (e.g. hallucinations) and attribute low quality scores to them. To that end the provided test sets will include a set of source-target segments with critical errors for which **no additional training data** will be provided. We thus aim to investigate whether submitted models are robust to cases such as significant deviations in meaning, hallucinations, etc. 
 
 > #### **Note**
-> The evaluation for critical errors will be separate to the main evaluation of performance for quality prediction. 
+> The evaluation for critical errors will be separate to the main evaluation of performance for quality prediction and will not be included in the leaderboard. 
 
 ## Zero-shot LPs
 We introduce two new zero-shot test sets, aiming to further motivate zero-/few-shot approaches.
@@ -64,14 +64,14 @@ We will use the following baselines:
 
 ## Sentence-level
   
- We will use **Spearman** as primary metric and also compute Kendall and Pearson as secondary metrics.
+ We will use **Spearman** as primary metric and also compute Kendall and Pearson as secondary metrics.  
 
 
  ### Critical error detection
 As a complementary evaluation, we will evaluate systems with respect to the detection of critical errors. We specifically want to assess the ability of submitted models to score translations with critical errors, such as hallucinations, *lower* than the other translations. To evaluate this, we will compute the *AUROC* and *recall@n* for each submission, with respect to the translations flagged as critical errors.
 
 ## Word-level
-We will use **MCC** (Matthews correlation coefficient) as a primary metric. 
+We will use **MCC** (Matthews correlation coefficient) as a primary metric and F1-score as secondary.
 
 
 ---
