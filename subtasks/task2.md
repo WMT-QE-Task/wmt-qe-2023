@@ -52,7 +52,7 @@ Where:
 * **TARGET SENTENCE** is the target sentence based on which the error span indices were extracted.  You should use **exactly the target sentence as provided by the test set** to ensure alignment with the gold labels.
 * **ERROR START INDICES** the start indices (character level) of every exrror span extracted. For multiple error spans separate indices by a whitespace. For no errors output *-1*.
 * **ERROR END INDICES** the end indices (character level) of every exrror span extracted. For multiple error spans separate indices by a whitespace. For no errors output *-1*. 
-* **ERROR TYPES** indication of *minor* or *major* error for each detected error span. The number of indices should match the number of errors.
+* **ERROR TYPES** indication of *minor* or *major* error for each detected error span. The number of indices should match the number of errors. If there is no error span in a segment indicate with *no-error*.
 
 Each field should be delimited by a single tab (<\t>) character.
 
