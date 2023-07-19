@@ -123,7 +123,7 @@ Line 2: \<NUMBER OF PARAMETERS>
 
 Line 3: \<NUMBER OF ENSEMBLED MODELS> (set to 1 if there is no ensemble)
 
-Lines 4-n where -n is the number of test samples:
+Lines 4-n where -n is the total number of tokens (words) in the test samples:
 \<LANGUAGE PAIR> \<METHOD NAME> \<TYPE> \<SEGMENT NUMBER> \<WORD INDEX> \<WORD> \<BINARY SCORE>
 
 Where:
