@@ -48,6 +48,17 @@ Below we present the language pairs for the 2023 shared task along with availabl
 
  &nbsp;&nbsp; (*) post-edits (word level quality estimation) available as test-set only
 
+> #### **Note**
+> The MQM annotation convention that we follow is similar to last year's QE task (see dev files in the data table). Specifically based on the provided MQM annotations we compute the MQM error by summing penalties for each error category:
+> - +1 point for *minor* errors
+> - +5 points for *major* errors
+> - +10 points for critical errors  
+>
+> To align with DA annotations we subtract the summed penalties from 100 (perfect score) and we then divide by the sentence length (computed as *number of words*). $$MQM = {100 -\sum error\_penalties \over \#words}$$
+>We finally standardize the scores for each language pair/annotator.
+>
+
+
 
 ---
 ## Baselines
