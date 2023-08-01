@@ -54,12 +54,9 @@ Below we present the language pairs for the 2023 shared task along with availabl
 > - +5 points for *major* errors
 > - +10 points for critical errors  
 >
-> To align with DA annotations we subtract the summed penalties from 100 (perfect score) and we then divide by the sentence length (computed as *number of words*). $$MQM = {100 -\sum error\_penalties \over \#words}$$
->We finally standardize the scores for each language pair/annotator.
+> To align with DA annotations we subtract the summed penalties from 100 (perfect score) and we then divide by the sentence length (computed as *number of words*). 
+> We finally standardize the scores for each language pair/annotator.
 >
-
-
-
 ---
 ## Baselines
 
