@@ -13,6 +13,10 @@ layout: home
 
 ``❗`` Note that the codalab will be ready for submissions on the **7th of August** (submission deadline extended to 17th of August).
 
+``❗`` Test data is now available on  [**github**](https://github.com/WMT-QE-Task/wmt-qe-2023-data/tree/main/test_data_2023).
+
+``❗`` Note that the codalab will be ready for submissions on the **7th of August** (submission deadline extended to 17th of August).
+
 ``❗`` To easily stay up-to-date you can also follow our [**Twitter account**](https://twitter.com/qe_task).
 
 ``❗`` Please also register to the [**QE google-group**](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive updates and announcements immediately, and **ask questions**.
