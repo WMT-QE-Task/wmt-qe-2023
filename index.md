@@ -7,6 +7,7 @@ layout: home
 
 # Welcome to the 2023 Quality Estimation Shared Task!
 
+``❗`` Codalab competitions out on the 8th of August 23:59 AoE
 
 ``❗`` Test data is now available on  [**github**](https://github.com/WMT-QE-Task/wmt-qe-2023-data/tree/main/test_data_2023).
 
