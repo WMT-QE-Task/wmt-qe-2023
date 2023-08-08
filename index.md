@@ -7,15 +7,10 @@ layout: home
 
 # Welcome to the 2023 Quality Estimation Shared Task!
 
-``❗`` Codalab competitions out on the 8th of August 23:59 AoE
 
 ``❗`` Test data is now available on  [**github**](https://github.com/WMT-QE-Task/wmt-qe-2023-data/tree/main/test_data_2023).
 
-``❗`` Note that the codalab will be ready for submissions on the **7th of August** (submission deadline extended to 17th of August).
-
-``❗`` Test data is now available on  [**github**](https://github.com/WMT-QE-Task/wmt-qe-2023-data/tree/main/test_data_2023).
-
-``❗`` Note that the codalab will be ready for submissions on the **7th of August** (submission deadline extended to 17th of August).
+``❗`` Note that the codalab will be ready for submissions on the **~~7th~~ 8th of August 23:59 AoE** (submission deadline extended to 17th of August 23:59 AoE).
 
 ``❗`` To easily stay up-to-date you can also follow our [**Twitter account**](https://twitter.com/qe_task).
 
