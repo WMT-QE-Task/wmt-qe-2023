@@ -10,13 +10,45 @@ layout: home
 
 ``❗`` Test data is now available on  [**github**](https://github.com/WMT-QE-Task/wmt-qe-2023-data/tree/main/test_data_2023).
 
-``❗`` Note that the codalab will be ready for submissions on the **~~7th~~ 8th of August 23:59 AoE** (submission deadline extended to 17th of August 23:59 AoE).
+``❗`` Codalab is now ready! See links and information below.
 
 ``❗`` To easily stay up-to-date you can also follow our [**Twitter account**](https://twitter.com/qe_task).
 
 ``❗`` Please also register to the [**QE google-group**](https://groups.google.com/g/wmt-qe-shared-task/) in order to be able to receive updates and announcements immediately, and **ask questions**.
 
+# Codalab:
 
+
+## Links
+Task 1 - sentence-level:  https://codalab.lisn.upsaclay.fr/competitions/15043
+Task 1 - word-level: https://codalab.lisn.upsaclay.fr/competitions/15044
+Task 2 - error span detection: https://codalab.lisn.upsaclay.fr/competitions/15045 
+
+
+## Instructions
+
+Once you have created your account and registered to a competition, please make sure to:
+
+1. Make only 1 registration for each team on Codalab;
+
+2. Ensure you have the latest test data: especially the tokenised translations for Task 1 - word level which have been updated;
+
+3. Follow the submission format indicated for each competition. Note that this year we do not have individual phases for each language pair. Instead, you can submit your predictions all together (in any order of language pairs), i.e. one submission may include all language pairs of a task or just the ones you want to focus on. 
+To know how your submission performed, due to the leaderboard being blind, you need to manually download the scores via "View scoring error log".  Note: you will see the macro-average only if you submit to all language pairs.
+
+4. Ensure you submit a zip file with the requested 'predictions.txt' file, and a 'metadata.txt' file that includes the following information:
+    1. Team name
+    2. Model description: method, use of external data, models used (we refer you to findings papers from previous years as to what information and format we expect).
+
+5. Each participant is given a quota of 10 submissions overall, with a limit of 5 per day;
+
+6. This year we are keeping the leaderboards private (or blind) during the "competition" phase (ending August 17th noon UTC or 23:59 AoE). After that deadline, the "post-competition" phase of each Codalab will become active and you will be able to make as many submissions as you want (still in a limit of 5 a day).
+Note: only submissions received during the "competition" phase will be used to determine the winner(s) of each task, and thus will be considered for the findings paper.
+
+7. If you have any questions/struggles, please use the Forum of the task you are participating in. This way, each question and its answers can benefit all.
+
+
+# Description
 This shared task focuses on automatic methods for estimating the quality of neural machine translation output at run-time, without relying on reference translations. It will cover estimation at sentence and word levels and critical error detection. This year we put emphasis on:
 
 * Medium- and **low-resource** language pairs  
@@ -29,7 +61,6 @@ This shared task focuses on automatic methods for estimating the quality of neur
 	* Shared sources - translations - post-edits  (English-Marathi) 
 * Incorporated critical error detection tasks
 * Incorporated zero-shot tasks
-
 ## Language pairs covered
 
 This year we will release test-sets on the following language-pairs:
