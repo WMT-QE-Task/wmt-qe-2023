@@ -9,7 +9,7 @@ title: 'Previous Editions'
 
 You can find below the links to the previous QE shared task editions, organised as part of the WMT conference
 
-* [2022 QE website](https://wmt-qe-task.github.io/WMT-QE-task-2022.github.io/) &emsp;[2022 QE results](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/results)&emsp; [2022 QE paper](https://aclanthology.org/2022.wmt-1.3/) &emsp; 
+* [2022 QE website](https://wmt-qe-task.github.io/wmt-qe-2022/) &emsp;[2022 QE results](https://github.com/WMT-QE-Task/wmt-qe-2022-data/tree/main/results)&emsp; [2022 QE paper](https://aclanthology.org/2022.wmt-1.3/) &emsp; 
 * [2021 QE website](https://www.statmt.org/wmt21/quality-estimation-task.html) &emsp; [2021 QE results](https://www.statmt.org/wmt21/quality-estimation-task_results.html) &emsp; [2021 QE paper](https://aclanthology.org/2021.wmt-1.71/) &emsp; 
 * [2020 QE website](https://www.statmt.org/wmt20/quality-estimation-task.html)&emsp; [2020 QE results](https://www.statmt.org/wmt20/quality-estimation-task_results.html)&emsp; [2020 QE paper](https://aclanthology.org/2020.wmt-1.79/) &emsp; 
 * [2019 QE website](https://statmt.org/wmt19/qe-task.html) &emsp; [2019 QE data]() &emsp; [2019 QE results](https://www.statmt.org/wmt19/qe-results.html) &emsp; [2019 QE paper](https://www.statmt.org/wmt19/qe-results.html) &emsp; 
