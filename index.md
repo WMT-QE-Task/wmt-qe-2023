@@ -7,6 +7,7 @@ layout: home
 
 # Welcome to the 2023 Quality Estimation Shared Task!
 
+``❗`` The <a href="https://www.statmt.org/wmt23/quality-estimation-task_results.html">results of the 2023 edition</a> are available.
 
 ``❗`` Test data is now available on  [**github**](https://github.com/WMT-QE-Task/wmt-qe-2023-data/tree/main/test_data_2023).
 
