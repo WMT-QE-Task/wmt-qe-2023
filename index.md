@@ -89,12 +89,12 @@ See more details in [Task 1](./subtasks/task1.md) and [Task 2](./subtasks/task2.
 | Release of dev data | 3rd July 2023 | 
 | Release of test data | 1st August, 2023 |
 | Submission of test predictions deadline | ~~15th~~ <span style="color:red">17th August 2023</span> |  
-| Announcement of results | (TBA) September, 2023|
-| System description submission deadline | (TBA) August 2023 |
-| Paper submission deadline to WMT | (TBA) September, 2023 |
-| WMT Notification of acceptance | 06 October, 2023 |
-| WMT Camera-ready deadline | 20 October, 2023 |
-| WMT Conference | 	(TBA) December, 2023 |
+| Announcement of results | 3rd September, 2023|
+| System description submission deadline | 31st August 2023 |
+| Paper submission deadline to WMT | 5th September, 2023 |
+| WMT Notification of acceptance | 6th October, 2023 |
+| WMT Camera-ready deadline | 18th October, 2023 |
+| WMT Conference | 6-7 December, 2023 |
 
 ## Goals
 
