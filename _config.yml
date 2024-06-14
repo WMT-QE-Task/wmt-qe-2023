@@ -9,7 +9,7 @@ permalink:        pretty
 title:            'WMT QE Shared Task 2023'
 #tagline:          'A Jekyll theme'
 description:      'Automatic methods for estimating the quality of MT output at run-time.'
-#url:              http://hyde.getpoole.com
+url:               /wmt-qe-2023/
 baseurl:           /wmt-qe-2023/
 
 #author:
